@@ -233,7 +233,6 @@ $c->{'ref2021'}->{ref2_validate_fields} = sub {
     if($repo->can_call("eprint_is_compliant") && $eprint->exists_and_set("hoa_compliant")){
 
         my $compliance = $repo->call( "eprint_is_compliant", $repo, $eprint) ;
-        print STDERR "COMPLIANCE VALUE: $compliance\n"; 
         if( $compliance eq 'N' )
         {
             push @$problems, $repo->html_phrase( "ref2021:validate:not_oa_compliant",

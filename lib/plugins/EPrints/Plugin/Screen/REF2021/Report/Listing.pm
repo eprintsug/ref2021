@@ -161,8 +161,8 @@ sub render_reports
         my $frag = $self->{session}->make_doc_fragment;
 
 	my @reports = @{$self->{session}->config( 'ref2021', 'reports' ) || [] };
-    print STDERR join(",",@reports)." <-- LOOK\n";
-	my $select = $self->{session}->make_element( 'select', id => "report", name => "report" );
+	
+    my $select = $self->{session}->make_element( 'select', id => "report", name => "report" );
 	my $n = 0;
 	foreach my $reportid ( @reports )
 	{

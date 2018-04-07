@@ -36,13 +36,13 @@ sub get_ref4_data
         my( $self ) = @_;
 	
 	my $session = $self->{session};
-        my $benchmark = $self->{processor}->{benchmark};
+    my $benchmark = $self->{processor}->{benchmark};
 	my %uoa_ids = map { $_->id => undef } @{ $self->{processor}->{uoas} || [] };
 
 	my $data;
-
 	foreach my $uoa ( %uoa_ids )
 	{
+
 		$session->dataset( 'ref2021_environment' )->search(
 			filters => [
 				{ meta_fields => [ 'ref_benchmarkid' ], value => $benchmark->get_id },

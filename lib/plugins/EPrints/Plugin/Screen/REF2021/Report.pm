@@ -182,7 +182,7 @@ sub properties_from
 	if( $format && $report )
 	{
 		my $plugin = $self->{session}->plugin( "Export::$format", report => $report );
-		if( defined $plugin && $plugin->can_accept( "report/$report" ) )
+		if( defined $plugin && $plugin->can_accept( "report2021/$report" ) )
 		{
 			$self->{processor}->{plugin} = $plugin;
 		}

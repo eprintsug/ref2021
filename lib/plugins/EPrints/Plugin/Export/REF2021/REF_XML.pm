@@ -56,15 +56,12 @@ HEADER
 		my( undef, undef, $dataobj ) = @_;
 
 		my $uoa = $plugin->get_current_uoa( $dataobj );
-        print STDERR "UOA: $uoa\n";
 		return unless( defined $uoa );
 
 		if( !defined $current_uoa || ( "$current_uoa" ne "$uoa" ) )
 		{
-            print STDERR "go go\n";
 
 			my( $hefce_uoa_id, $is_multiple ) = $plugin->parse_uoa( $uoa );
-            print STDERR "HEFCE_UOA_ID : $hefce_uoa_id\n";
 
 			return unless( defined $hefce_uoa_id );
 

@@ -114,7 +114,7 @@ sub render_result_row
                 $benchmark_id );
  
         $searchexp->add_field(
-                $env_ds->get_field( "ref2021_uoa" ),
+                $env_ds->get_field( "ref_uoa" ),
                 $uoa );
        
         my $table = $session->make_element( 'table', class => 'ep_ref_listing_ref4' );
@@ -132,7 +132,7 @@ sub render_result_row
 	my $list = $searchexp->perform_search;
 
 	my $data = {};
-	foreach my $year (qw( 2008 2009 2010 2011 2012 ))
+	foreach my $year (qw( 2013 2014 2015 2016 2017 2018 2019 ))
 	{
 		$data->{$year}->{"id"} = -1;
 		$data->{$year}->{"degrees"} = 0;
@@ -168,7 +168,7 @@ sub render_result_row
 		{
 			my $new_item = $env_ds->create_dataobj();
 			$new_item->set_value("ref_benchmarkid", [ $benchmark_id ] );
-			$new_item->set_value("ref2021_uoa", [ $uoa ] );
+			$new_item->set_value("ref_uoa", [ $uoa ] );
 			$new_item->set_value("year", $year);
 			$new_item->set_value("degrees", 0);
 			$new_item->commit;
