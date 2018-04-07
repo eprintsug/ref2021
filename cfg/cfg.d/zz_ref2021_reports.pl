@@ -7,9 +7,9 @@
 # This file contains the code for doing data validation + data export
 
 
-# Used by REF::Report::Listing to pre-populate the list of available reports (and their order):
-$c->{'ref'}->{'reports'} = [] if !defined $c->{'ref'}->{'reports'};
-unshift @{$c->{'ref'}->{'reports'}}, ( 'REF1a', 'REF1b', 'REF1c', 'REF2' );
+# Used by REF2021::Report::Listing to pre-populate the list of available reports (and their order):
+$c->{'ref2021'}->{'reports'} = [] if !defined $c->{'ref2021'}->{'reports'};
+unshift @{$c->{'ref2021'}->{'reports'}}, ( 'REF1a', 'REF1b', 'REF1c', 'REF2' );
 
 
 ##################
@@ -19,7 +19,7 @@ unshift @{$c->{'ref'}->{'reports'}}, ( 'REF1a', 'REF1b', 'REF1c', 'REF2' );
 # REF2
 
 
-$c->{'ref'}->{map_eprint_type} = sub {
+$c->{'ref2021'}->{map_eprint_type} = sub {
 	my( $eprint ) = @_;
 
 	my $type = $eprint->value( 'type' ) or return;
@@ -45,7 +45,7 @@ $c->{'ref'}->{map_eprint_type} = sub {
 };
 
 # optional fields: do not show a validation warning if those fields are not defined
-$c->{'ref'}->{eprint_optional_map} = {map { $_ => 1 } qw(
+$c->{'ref2021'}->{eprint_optional_map} = {map { $_ => 1 } qw(
 	R_publisher
 	P_publisher
 	N_publisher
@@ -80,35 +80,35 @@ $c->{'ref'}->{eprint_optional_map} = {map { $_ => 1 } qw(
 	T_url
 )};
 
-$c->{'ref'}->{ref2_validate_fields} = sub {
+$c->{'ref2021'}->{ref2_validate_fields} = sub {
 	my( $repo, $selection, $eprint, $problems ) = @_;	#?? 
-
-	if( !defined $eprint )
+	
+    if( !defined $eprint )
 	{
 		$eprint = $repo->eprint( $selection->value( "eprint_id" ) );
 	}
 	if( !defined $eprint )
 	{
-		push @$problems, $repo->html_phrase( "ref:validate:bad_eprint" );
+		push @$problems, $repo->html_phrase( "ref2021:validate:bad_eprint" );
 		return {};
 	}
 
 	if( $eprint->is_set( 'eprint_status' ) && $eprint->value( 'eprint_status' ) ne 'archive' )
 	{
-		push @$problems, $repo->html_phrase( "ref:validate:eprint_not_live" );
+		push @$problems, $repo->html_phrase( "ref2021:validate:eprint_not_live" );
 	}
 
 	my $type = $selection->value( 'type' );
 
 	unless( defined $type )
 	{
-		$type = $repo->call( [ 'ref', 'map_eprint_type' ], $eprint );
+		$type = $repo->call( [ 'ref2021', 'map_eprint_type' ], $eprint );
 	}
 
 	if( !defined $type )
 	{
 		$type = 'T'; # we need type for other choices
-		push @$problems, $repo->html_phrase( "ref:validate:bad_type",
+		push @$problems, $repo->html_phrase( "ref2021:validate:bad_type",
 			eprint_type => $repo->make_text( $eprint->value( "type" ) )
 		);
 		return {};
@@ -230,13 +230,13 @@ $c->{'ref'}->{ref2_validate_fields} = sub {
 		$ref{media_of_output} = $eprint->value( "output_media" );
 	}
     
-    if($eprint->exists_and_set("hoa_compliant")){
+    if($repo->can_call("eprint_is_compliant") && $eprint->exists_and_set("hoa_compliant")){
 
-        my $compliance = is_compliant($repo, $eprint);
-       
+        my $compliance = $repo->call( "eprint_is_compliant", $repo, $eprint) ;
+        print STDERR "COMPLIANCE VALUE: $compliance\n"; 
         if( $compliance eq 'N' )
         {
-            push @$problems, $repo->html_phrase( "ref:validate:not_oa_compliant",
+            push @$problems, $repo->html_phrase( "ref2021:validate:not_oa_compliant",
                 ref_cc_link => $repo->render_link($eprint->get_control_url."&ep_eprint_view_current=6", "_new" ) 
             );
         }
@@ -260,7 +260,7 @@ $c->{'ref'}->{ref2_validate_fields} = sub {
 			if( $curlen > $maxlen )
 			{
 				my $desc = ( $repo->dataset( 'eprint' )->has_field( $key ) ) ? $repo->html_phrase( "eprint_fieldname_$key" ) : $repo->make_text( $key );
-				push @$problems, $repo->html_phrase( 'ref:validate:char_limit', fieldname => $desc, maxlen => $repo->make_text( $maxlen ) );
+				push @$problems, $repo->html_phrase( 'ref2021:validate:char_limit', fieldname => $desc, maxlen => $repo->make_text( $maxlen ) );
 			}
 		}
 
@@ -269,7 +269,7 @@ $c->{'ref'}->{ref2_validate_fields} = sub {
 
 		my $desc = ( $repo->dataset( 'eprint' )->has_field( $key ) ) ? $repo->html_phrase( "eprint_fieldname_$key" ) : $repo->make_text( $key );
 
-		push @$problems, $repo->html_phrase( "ref:validate:missing_field",
+		push @$problems, $repo->html_phrase( "ref2021:validate:missing_field",
 			fieldname => $desc );
 	}
 
@@ -277,7 +277,7 @@ $c->{'ref'}->{ref2_validate_fields} = sub {
 };
 
 # in characters
-$c->{'ref'}->{'ref2_fields_length'} = {
+$c->{'ref2021'}->{'ref2_fields_length'} = {
 	place => 256,
 	publisher => 256,
 	volume_title => 256,
@@ -293,7 +293,7 @@ $c->{'ref'}->{'ref2_fields_length'} = {
 };
 
 
-$c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = sub {
+$c->{plugins}->{"Screen::REF2021::Report::REF2"}->{params}->{validate_selection} = sub {
 	my( $user, $selection, $eprint, $ctx ) = @_;
 
 	my $session = $user->{session};
@@ -305,7 +305,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 		my @words = split /\s+/, $selection->value( "details" );
 		if( @words > 300 )
 		{
-			push @problems, $session->html_phrase( "ref:validate:word_limit",
+			push @problems, $session->html_phrase( "ref2021:validate:word_limit",
 				field => $selection->{dataset}->field( "details" )->render_name( $session ),
 				length => $session->make_text( scalar @words ),
 				limit => $session->make_text( 300 ),
@@ -317,7 +317,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 		my @words = split /\s+/, $selection->value( "abstract" );
 		if( @words > 100 )
 		{
-			push @problems, $session->html_phrase( "ref:validate:word_limit",
+			push @problems, $session->html_phrase( "ref2021:validate:word_limit",
 				field => $selection->{dataset}->field( "abstract" )->render_name( $session ),
 				length => $session->make_text( scalar @words ),
 				limit => $session->make_text( 100 ),
@@ -330,13 +330,13 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 		# can't have chosen a reserved output if the current selection is not double-weighted
 		if( !$selection->is_set( 'weight' ) || $selection->get_value( 'weight' ) ne 'double' )
 		{
-			push @problems, $session->html_phrase( "ref:validate:wrong_reserve" );
+			push @problems, $session->html_phrase( "ref2021:validate:wrong_reserve" );
 		}
 	
 		# a selection can't be double-weighted and a reserved for itself
 		if( $selection->get_value( 'reserve' ) eq $selection->get_id )
 		{
-			push @problems, $session->html_phrase( "ref:validate:self_reserve" );
+			push @problems, $session->html_phrase( "ref2021:validate:self_reserve" );
 		}
 
 	}
@@ -345,7 +345,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 		# if the output is double weighted then it must reference a reserved output
 		if( $selection->is_set( 'weight' ) && $selection->value( 'weight' ) eq 'double' )
 		{
-			push @problems, $session->html_phrase( "ref:validate:missing_field",
+			push @problems, $session->html_phrase( "ref2021:validate:missing_field",
 					fieldname => $session->html_phrase( 'ref_selection_fieldname_reserve' )
 			);
 
@@ -355,7 +355,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 	# if the output is double-weighted then must provide a statement
 	if( $selection->is_set( 'weight' ) && $selection->value( 'weight' ) eq 'double' && !$selection->is_set( 'weight_text' ) ) 
 	{
-                push @problems, $session->html_phrase( "ref:validate:missing_field",
+                push @problems, $session->html_phrase( "ref2021:validate:missing_field",
                         fieldname => $session->html_phrase( 'ref_selection_fieldname_weight_text' )
                 );	
 	}
@@ -363,7 +363,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 	# if the output is non-english, then must provide an English abstract
 	if( $selection->is_set( 'non_english' ) && $selection->value( 'non_english' ) eq 'TRUE' && !$selection->is_set( 'abstract' ) )
 	{
-                push @problems, $session->html_phrase( "ref:validate:missing_field",
+                push @problems, $session->html_phrase( "ref2021:validate:missing_field",
                         fieldname => $session->html_phrase( 'ref_selection_fieldname_abstract' )
                 );
 	}
@@ -371,7 +371,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 	# if the output has conflicts of interest then must provide the list of the conflicted panel members
 	if( $selection->is_set( 'has_conflicts' ) && $selection->value( 'has_conflicts' ) eq 'TRUE' && !$selection->is_set( 'conflicted_members' ) )
 	{
-                push @problems, $session->html_phrase( "ref:validate:missing_field",
+                push @problems, $session->html_phrase( "ref2021:validate:missing_field",
                         fieldname => $session->html_phrase( 'ref_selection_fieldname_conflicted_members' )
                 );
 	}
@@ -379,13 +379,13 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 	# if the output is non-english, then must provide an English abstract
 	if( $selection->is_set( 'is_xref' ) && $selection->value( 'is_xref' ) eq 'TRUE' && !$selection->is_set( 'xref' ) )
 	{
-                push @problems, $session->html_phrase( "ref:validate:missing_field",
+                push @problems, $session->html_phrase( "ref2021:validate:missing_field",
                         fieldname => $session->html_phrase( 'ref_selection_fieldname_xref' )
                 );
 	}
 
 	# extra validation:
-	$session->call( [ 'ref', 'ref2_validate_fields' ], $session, $selection, $eprint, \@problems );
+	$session->call( [ 'ref2021', 'ref2_validate_fields' ], $session, $selection, $eprint, \@problems );
 
 	my $year = $eprint->value( "date" );
 	$year = "" if !defined $year;
@@ -393,7 +393,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 
     if( !$year || $year < 2014 || $year > 2019 )
 	{
-		push @problems, $session->html_phrase( "ref:validate:year",
+		push @problems, $session->html_phrase( "ref2021:validate:year",
 			year => $session->make_text( $year ),
 		);
 	}
@@ -405,7 +405,7 @@ $c->{plugins}->{"Screen::REF::Report::REF2"}->{params}->{validate_selection} = s
 
 # REF1a
 
-$c->{plugins}->{"Screen::REF::Report::REF1a"}->{params}->{validate_user} = sub {
+$c->{plugins}->{"Screen::REF2021::Report::REF1a"}->{params}->{validate_user} = sub {
 	my( $user, $ctx ) = @_;
 
 	my $session = $user->{session};
@@ -416,13 +416,13 @@ $c->{plugins}->{"Screen::REF::Report::REF1a"}->{params}->{validate_user} = sub {
 
 	unless( defined $type )
 	{
-		push @problems, { desc => $session->html_phrase( "ref:validate_user:no_category"), field => 'ref_category' };
+		push @problems, { desc => $session->html_phrase( "ref2021:validate_user:no_category"), field => 'ref_category' };
 		return @problems;	# can't go further, we must know the category
 	}
 
 	if( !( $type eq 'A' || $type eq 'C' ) )
 	{
-		push @problems, { desc => $session->html_phrase( "ref:validate_user:wrong_category") };
+		push @problems, { desc => $session->html_phrase( "ref2021:validate_user:wrong_category") };
 		return @problems;	# can't go further, we must know the category
 	}
 
@@ -441,7 +441,7 @@ $c->{plugins}->{"Screen::REF::Report::REF1a"}->{params}->{validate_user} = sub {
 
 		unless( $user->is_set( "$_" ) )
 		{
-			push @problems, { field => $_, desc => $session->html_phrase( "ref:validate_user:missing_field", field => $ds->field( $_ )->render_name ) };
+			push @problems, { field => $_, desc => $session->html_phrase( "ref2021:validate_user:missing_field", field => $ds->field( $_ )->render_name ) };
 			next;
 		}
 
@@ -451,11 +451,11 @@ $c->{plugins}->{"Screen::REF::Report::REF1a"}->{params}->{validate_user} = sub {
 			my $fte = $user->get_value( "$_");
 			if( $fte < 0.2 )
 			{
-				push @problems, { field => 'ref_fte', desc => $session->html_phrase( "ref:validate_user:low_fte" ) };
+				push @problems, { field => 'ref_fte', desc => $session->html_phrase( "ref2021:validate_user:low_fte" ) };
 			}
 			elsif( $fte > 1.0 )
 			{
-				push @problems, { field => 'ref_fte', desc => $session->html_phrase( "ref:validate_user:high_fte" ) };
+				push @problems, { field => 'ref_fte', desc => $session->html_phrase( "ref2021:validate_user:high_fte" ) };
 			}
 		}
 
@@ -483,25 +483,25 @@ $c->{plugins}->{"Screen::REF::Report::REF1a"}->{params}->{validate_user} = sub {
 			my $date_mf = $type."_".$date;	# eg secondment_start ...
 			if( !$circ->is_set( $date_mf ) )
 			{
-				push @problems, { field => $date_mf, desc => $session->html_phrase( "ref:validate_user:missing_field", field => $circds->field( $date_mf )->render_name ) };
+				push @problems, { field => $date_mf, desc => $session->html_phrase( "ref2021:validate_user:missing_field", field => $circds->field( $date_mf )->render_name ) };
 			}
 		}
 	}
 
 	if( $circ->is_set( 'circ' ) && !$circ->is_set( 'circ_text' ) )
 	{
-		push @problems, { field => 'circ_text', desc => $session->html_phrase( "ref:validate_user:missing_field", field => $circds->field( 'circ_text' )->render_name ) };
+		push @problems, { field => 'circ_text', desc => $session->html_phrase( "ref2021:validate_user:missing_field", field => $circds->field( 'circ_text' )->render_name ) };
 	}
 
 	if( $circ->is_set( 'is_non_uk' ) && $circ->value( 'is_non_uk' ) eq 'TRUE' && !$circ->is_set( 'non_uk_text' ) )
 	{
-		push @problems, { field => 'non_uk_text', desc => $session->html_phrase( "ref:validate_user:missing_field", field => $circds->field( 'non_uk_text' )->render_name ) };
+		push @problems, { field => 'non_uk_text', desc => $session->html_phrase( "ref2021:validate_user:missing_field", field => $circds->field( 'non_uk_text' )->render_name ) };
 	}
 
 	return @problems;
 };
 
-$c->{plugins}->{"Screen::REF::Report::REF1c"}->{params}->{validate_user} = sub {
+$c->{plugins}->{"Screen::REF2021::Report::REF1c"}->{params}->{validate_user} = sub {
 	my( $user, $ctx ) = @_;
 
 	my $session = $user->{session};
@@ -519,7 +519,7 @@ $c->{plugins}->{"Screen::REF::Report::REF1c"}->{params}->{validate_user} = sub {
 		foreach my $mf ( 'catc_org', 'catc_jobtitle', 'catc_text' )
 		{
 			next if( $circ->is_set( $mf ) );
-			push @problems, { field => $mf, desc => $session->html_phrase( "ref:validate_user:missing_field", field => $circds->field( $mf )->render_name ) };
+			push @problems, { field => $mf, desc => $session->html_phrase( "ref2021:validate_user:missing_field", field => $circds->field( $mf )->render_name ) };
 		}
 	}
 
@@ -552,11 +552,11 @@ $c->{plugins}->{"Screen::REF::Report::REF1c"}->{params}->{validate_user} = sub {
 
 # REF1a Fields - fields defined by HEFCE for the REF1/a Report
 
-$c->{'ref'}->{'ref1a'}->{'fields'} = [qw{ hesaStaffIdentifier staffIdentifier surname initials category birthDate contractedFte isResearchFellow isEarlyCareerResearcher startDate isOnFixedTermContract contractStartDate contractEndDate isOnSecondment secondmentStartDate secondmentEndDate isOnUnpaidLeave unpaidLeaveStartDate unpaidLeaveEndDate isNonUKBased nonUKBasedText isSensitive circumstanceExplanation }];
+$c->{'ref2021'}->{'ref1a'}->{'fields'} = [qw{ hesaStaffIdentifier staffIdentifier surname initials category birthDate contractedFte isResearchFellow isEarlyCareerResearcher startDate isOnFixedTermContract contractStartDate contractEndDate isOnSecondment secondmentStartDate secondmentEndDate isOnUnpaidLeave unpaidLeaveStartDate unpaidLeaveEndDate isNonUKBased nonUKBasedText isSensitive circumstanceExplanation }];
 
 # REF1a Mappings
 
-$c->{'ref'}->{'ref1a'}->{'mappings'} = {
+$c->{'ref2021'}->{'ref1a'}->{'mappings'} = {
 	hesaStaffIdentifier => "user.hesa",
 	staffIdentifier => "user.staff_id",
 	surname => \&ref1a_surname,
@@ -583,39 +583,42 @@ $c->{'ref'}->{'ref1a'}->{'mappings'} = {
 	# + ResearchGroup[1|2|3|4]
 };
 
-sub ref1a_surname
 {
-	my( $plugin, $objects ) = @_;
+    no warnings 'redefine';
 
-	my $user = $objects->{user} or return;
+    sub ref1a_surname
+    {
+        my( $plugin, $objects ) = @_;
 
-	my $name = $user->value( 'name' ) or return;
+        my $user = $objects->{user} or return;
 
-	return $name->{family};
-}
+        my $name = $user->value( 'name' ) or return;
 
-sub ref1a_initials
-{
-	my( $plugin, $objects ) = @_;
+        return $name->{family};
+    }
 
-	my $user = $objects->{user} or return;
+    sub ref1a_initials
+    {
+        my( $plugin, $objects ) = @_;
 
-	my $name = $user->value( 'name' ) or return;
+        my $user = $objects->{user} or return;
 
-	my $gname = $name->{given} or return;
+        my $name = $user->value( 'name' ) or return;
 
-	return uc( substr( $gname, 0, 1 ) ).".";
-}
+        my $gname = $name->{given} or return;
 
+        return uc( substr( $gname, 0, 1 ) ).".";
+    }
 
+};
 
 # REF1b Fields - fields defined by HEFCE for the REF1/b Report
 
-$c->{'ref'}->{'ref1b'}->{'fields'} = [qw{ hesaIdentifier staffIdentifier circumstanceIdentifier earlyCareerStartDate totalPeriodOfAbsence numberOfQualifyingPeriods complexOutputReduction }];
+$c->{'ref2021'}->{'ref1b'}->{'fields'} = [qw{ hesaIdentifier staffIdentifier circumstanceIdentifier earlyCareerStartDate totalPeriodOfAbsence numberOfQualifyingPeriods complexOutputReduction }];
 
 # REF1b Mappings
 
-$c->{'ref'}->{'ref1b'}->{'mappings'} = {
+$c->{'ref2021'}->{'ref1b'}->{'mappings'} = {
 	hesaStaffIdentifier => "user.hesa",
 	staffIdentifier => "user.staff_id",
 	circumstanceIdentifier => "ref2021_circ.circ",
@@ -629,11 +632,11 @@ $c->{'ref'}->{'ref1b'}->{'mappings'} = {
 
 # REF1c Fields - fields defined by HEFCE for the REF1/c Report
 
-$c->{'ref'}->{'ref1c'}->{'fields'} = [qw{ hesaIdentifier staffIdentifier employingOrganisation jobTitle explanatoryText }];
+$c->{'ref2021'}->{'ref1c'}->{'fields'} = [qw{ hesaIdentifier staffIdentifier employingOrganisation jobTitle explanatoryText }];
 
 # REF1c Mappings
 
-$c->{'ref'}->{'ref1c'}->{'mappings'} = {
+$c->{'ref2021'}->{'ref1c'}->{'mappings'} = {
 	hesaStaffIdentifier => "user.hesa",
 	staffIdentifier => "user.staff_id",
 	employingOrganisation => "ref2021_circ.catc_org",
@@ -646,12 +649,12 @@ $c->{'ref'}->{'ref1c'}->{'mappings'} = {
 
 # REF2 Fields - fields defined by HEFCE for the REF2 Report
 
-$c->{'ref'}->{'ref2'}->{'fields'} = [qw{ hesaStaffIdentifier staffIdentifier outputNumber outputIdentifier outputType title place publisher volumeTitle volume issue firstPage articleNumber isbn issn doi patentNumber year url mediaOfOutput numberOfAdditionalAuthors isPendingPublication isDuplicateOutput isNonEnglishLanguage isInterdisciplinary proposeDoubleWeighting doubleWeightingStatement reserveOutput hasConflictsOfInterests conflictedPanelMembers isOutputCrossReferred crossReferToUoa additionalInformation englishAbstract researchGroup isSensitive internalRating selfRating Departments OACompliant }];
+$c->{'ref2021'}->{'ref2'}->{'fields'} = [qw{ hesaStaffIdentifier staffIdentifier outputNumber outputIdentifier outputType title place publisher volumeTitle volume issue firstPage articleNumber isbn issn doi patentNumber year url mediaOfOutput numberOfAdditionalAuthors isPendingPublication isDuplicateOutput isNonEnglishLanguage isInterdisciplinary proposeDoubleWeighting doubleWeightingStatement reserveOutput hasConflictsOfInterests conflictedPanelMembers isOutputCrossReferred crossReferToUoa additionalInformation englishAbstract researchGroup isSensitive internalRating selfRating Departments OACompliant }];
 
 
 # REF2 Mappings - how to extract the data and format it
 
-$c->{'ref'}->{'ref2'}->{'mappings'} = { 
+$c->{'ref2021'}->{'ref2'}->{'mappings'} = { 
 
 	"hesaStaffIdentifier" => "user.hesa",
 	"staffIdentifier" => "user.staff_id",
@@ -690,206 +693,207 @@ $c->{'ref'}->{'ref2'}->{'mappings'} = {
 	"englishAbstract" => \&ref2_abstract,				# ref2021_selection.abstract || eprint.abstract
 	"researchGroup" => "ref2021_selection.research_group",		# ref2021_selection.research_group
 	"isSensitive" => "ref2021_selection.sensitive",			# ref2021_selection.sensitive (bool)
-	"internalRating" => "ref2021_selection.rating",			# ref2021_selection.internalRating (goldsmiths' only)
 	"selfRating" => "ref2021_selection.self_rating",			# ref2021_selection.self_rating
 	"Departments" => "eprint.divisions",			# eprint.divisions
 	"OACompliant" => \&ref2_hoa_compliant,			# eprint.is compliant? Y/N/F (for future)
 
 };
 
-
-# for REF2 the following objects are passed to the sub's:
-# 	$objects->{ref2021_selection} - the current REF Selection object
-#	$objects->{eprint}	  - the related EPrint object
-#	$objects->{user}	  - the related User object
-
-sub ref2_url
 {
-	my( $plugin, $objects ) = @_;
+    no warnings 'redefine';
 
-	return $objects->{eprint}->get_url;
-}
+    # for REF2 the following objects are passed to the sub's:
+    # 	$objects->{ref2021_selection} - the current REF Selection object
+    #	$objects->{eprint}	  - the related EPrint object
+    #	$objects->{user}	  - the related User object
 
-sub ref2_outputNumber
-{
-	my( $plugin, $objects ) = @_;
-
-	my $user = $objects->{user};
-	my $key = $user->value( 'ref2021_uoa' )."-".$user->get_id;
-
-	if( exists $plugin->{_cache}->{$key} )
-	{
-		$plugin->{_cache}->{$key}++;
-	}
-	else
-	{
-		$plugin->{_cache}->{$key} = 1;
-	}
-
-	return $plugin->{_cache}->{$key};
-}
-
-sub ref2_patentNumber
-{
-	my( $plugin, $objects ) = @_;
-
-	my $ref_selection = $objects->{ref_selection};
-	my $eprint = $objects->{eprint};
-
-	my $valid = 0;
-	if( $ref_selection->is_set( 'type' ) )
-	{
-		$valid = 1 if( $ref_selection->value( 'type' ) eq 'F' );	# see HEFCE Output types
-	}
-	else
-	{
-		$valid = 1 if( $eprint->value( 'type' ) eq 'patent' );
-	}
-
-	if( $valid )
-	{
-		return $eprint->value( 'id_number' );
-	}
-
-	return undef;
-}
-
-sub ref2_year
-{
+    sub ref2_url
+    {
         my( $plugin, $objects ) = @_;
- 
-        my $eprint = $objects->{eprint};
 
-        return substr($eprint->value( 'date' ), 0, 4);
-}
+        return $objects->{eprint}->get_url;
+    }
 
-sub ref2_additionalAuthors
-{
-	my( $plugin, $objects ) = @_;
+    sub ref2_outputNumber
+    {
+        my( $plugin, $objects ) = @_;
 
-	my $co_authors = scalar( @{$objects->{eprint}->value( 'creators' ) || [] } ) - 1;
+        my $user = $objects->{user};
+        my $key = $user->value( 'ref2021_uoa' )."-".$user->get_id;
 
-	return $co_authors > 0 ? "$co_authors" : "0";
-}
-
-sub ref2_doubleWeighting
-{
-	my( $plugin, $objects ) = @_;
-
-	my $weight = $objects->{ref_selection}->value( 'weight' );
-
-	return ( defined $weight && $weight eq 'double' ) ? 'TRUE' : 'FALSE';
-}
-
-sub ref2_abstract
-{
-	my( $plugin, $objects ) = @_;
-
-	if( $objects->{ref_selection}->is_set( 'abstract' ) )
-	{
-		return $objects->{ref_selection}->value( 'abstract' ); 
-	}
-
-	return $objects->{eprint}->value( 'abstract' );
-}
-
-sub ref2_firstPage
-{
-	my( $plugin, $objects ) = @_;
-
-	return undef unless( $objects->{eprint}->is_set( 'pagerange' ) );
-
-	my $pagerange = $objects->{eprint}->value( 'pagerange' );
-
-	$pagerange =~ s/\-(.*)$//g;
-
-	return $pagerange;
-}
-
-sub ref2_volumeTitle
-{
-	my( $plugin, $objects ) = @_;
-
-	# this will depend mostly on the Output type - refer to the Output requirements document produced by HEFCE
-	
-	my $ref_selection = $objects->{ref_selection};
-	return undef unless( $ref_selection->is_set( 'type' ) );
-
-	my $eprint = $objects->{eprint};
-
-	my $type = $ref_selection->value( 'type' );
-
-	if( $type eq 'C' )
-	{
-		# C - Chapter in book => Book title
-		return $eprint->value( 'book_title' );
-	}
-	elsif( $type eq 'R' )
-	{
-		# R - Scholarly edition => title of edition
-		return $eprint->value( 'series' );
-	}
-	elsif( $type eq 'D' )
-	{
-		# D - Journal article => title of journal
-		return $eprint->value( 'publication' );
-	}	
-	elsif( $type eq 'E' )
-	{
-		# E - Conference contribution => name of conference / published proceedings
-		return $eprint->value( 'series' );
-	}
-
-	return undef;
-}
-
-sub ref2_cross_ref
-{
-	my( $plugin, $objects ) = @_;
-
-	my $ref_selection = $objects->{ref_selection};
-
-	my $uoa_id = $ref_selection->value( 'xref' ) or return;
-        if( $uoa_id =~ /^ref2021_(\w)(\d+)(b?)$/ )
-        {               
-		return $2;
+        if( exists $plugin->{_cache}->{$key} )
+        {
+            $plugin->{_cache}->{$key}++;
+        }
+        else
+        {
+            $plugin->{_cache}->{$key} = 1;
         }
 
-	return undef;
-}
-
-sub ref2_article_number
-{
-	my( $plugin, $objects ) = @_;
-
-	my $eprint = $objects->{eprint};
-	
-	# not a default EPrints field but some institutions may have added it
-	if( defined $eprint && $eprint->exists_and_set( 'article_number' ) )
-	{
-		return $eprint->value( 'article_number' );
-	}
-
-	# added in v1.2.3
-	return $objects->{ref_selection}->value( 'article_id' );
-}
-
-#Check for compliance NB: requires REF CC plugin to be installed
-sub ref2_hoa_compliant
-{
-
-	my( $plugin, $objects ) = @_;
-
-	my $eprint = $objects->{eprint};
-    my $flag = $eprint->value("hoa_compliant");	
-    my $repo = $plugin->{session};
-    
-    if($repo->can_call("eprint_is_compliant")){
-        return $repo->call( "eprint_is_compliant", $repo, $eprint )
+        return $plugin->{_cache}->{$key};
     }
-    return undef;
-}
 
+    sub ref2_patentNumber
+    {
+        my( $plugin, $objects ) = @_;
+
+        my $ref_selection = $objects->{ref_selection};
+        my $eprint = $objects->{eprint};
+
+        my $valid = 0;
+        if( $ref_selection->is_set( 'type' ) )
+        {
+            $valid = 1 if( $ref_selection->value( 'type' ) eq 'F' );	# see HEFCE Output types
+        }
+        else
+        {
+            $valid = 1 if( $eprint->value( 'type' ) eq 'patent' );
+        }
+
+        if( $valid )
+        {
+            return $eprint->value( 'id_number' );
+        }
+
+        return undef;
+    }
+
+    sub ref2_year
+    {
+            my( $plugin, $objects ) = @_;
+     
+            my $eprint = $objects->{eprint};
+
+            return substr($eprint->value( 'date' ), 0, 4);
+    }
+
+    sub ref2_additionalAuthors
+    {
+        my( $plugin, $objects ) = @_;
+
+        my $co_authors = scalar( @{$objects->{eprint}->value( 'creators' ) || [] } ) - 1;
+
+        return $co_authors > 0 ? "$co_authors" : "0";
+    }
+
+    sub ref2_doubleWeighting
+    {
+        my( $plugin, $objects ) = @_;
+
+        my $weight = $objects->{ref_selection}->value( 'weight' );
+
+        return ( defined $weight && $weight eq 'double' ) ? 'TRUE' : 'FALSE';
+    }
+
+    sub ref2_abstract
+    {
+        my( $plugin, $objects ) = @_;
+
+        if( $objects->{ref_selection}->is_set( 'abstract' ) )
+        {
+            return $objects->{ref_selection}->value( 'abstract' ); 
+        }
+
+        return $objects->{eprint}->value( 'abstract' );
+    }
+
+    sub ref2_firstPage
+    {
+        my( $plugin, $objects ) = @_;
+
+        return undef unless( $objects->{eprint}->is_set( 'pagerange' ) );
+
+        my $pagerange = $objects->{eprint}->value( 'pagerange' );
+
+        $pagerange =~ s/\-(.*)$//g;
+
+        return $pagerange;
+    }
+
+    sub ref2_volumeTitle
+    {
+        my( $plugin, $objects ) = @_;
+
+        # this will depend mostly on the Output type - refer to the Output requirements document produced by HEFCE
+        
+        my $ref_selection = $objects->{ref_selection};
+        return undef unless( $ref_selection->is_set( 'type' ) );
+
+        my $eprint = $objects->{eprint};
+
+        my $type = $ref_selection->value( 'type' );
+
+        if( $type eq 'C' )
+        {
+            # C - Chapter in book => Book title
+            return $eprint->value( 'book_title' );
+        }
+        elsif( $type eq 'R' )
+        {
+            # R - Scholarly edition => title of edition
+            return $eprint->value( 'series' );
+        }
+        elsif( $type eq 'D' )
+        {
+            # D - Journal article => title of journal
+            return $eprint->value( 'publication' );
+        }	
+        elsif( $type eq 'E' )
+        {
+            # E - Conference contribution => name of conference / published proceedings
+            return $eprint->value( 'series' );
+        }
+
+        return undef;
+    }
+
+    sub ref2_cross_ref
+    {
+        my( $plugin, $objects ) = @_;
+
+        my $ref_selection = $objects->{ref_selection};
+
+        my $uoa_id = $ref_selection->value( 'xref' ) or return;
+            if( $uoa_id =~ /^ref2021_(\w)(\d+)(b?)$/ )
+            {               
+            return $2;
+            }
+
+        return undef;
+    }
+
+    sub ref2_article_number
+    {
+        my( $plugin, $objects ) = @_;
+
+        my $eprint = $objects->{eprint};
+        
+        # not a default EPrints field but some institutions may have added it
+        if( defined $eprint && $eprint->exists_and_set( 'article_number' ) )
+        {
+            return $eprint->value( 'article_number' );
+        }
+
+        # added in v1.2.3
+        return $objects->{ref_selection}->value( 'article_id' );
+    }
+
+    #Check for compliance NB: requires REF CC plugin to be installed
+    sub ref2_hoa_compliant
+    {
+
+        my( $plugin, $objects ) = @_;
+
+        my $eprint = $objects->{eprint};
+        my $flag = $eprint->value("hoa_compliant");	
+        my $repo = $plugin->{session};
+        
+        if($repo->can_call("eprint_is_compliant")){
+            return $repo->call( "eprint_is_compliant", $repo, $eprint )
+        }
+        return undef;
+    }
+};
 
 1;
 

@@ -95,10 +95,10 @@ $c->{datasets}->{user}->{search}->{simple}->{meta_fields} = [ "name", "username"
 # Sets the datasets to search on the REF2021::Listing screen. By default, it will only search "archive".
 # If you want to search archive + buffer, change this to 'archive buffer'
 # If you want to search archive + buffer + inbox, change this to 'archive buffer inbox'
-$c->{'ref'}->{listing_search_datasets} = 'archive';
+$c->{'ref2021'}->{listing_search_datasets} = 'archive';
 
 # Default search to run on the REF2021::Listing page (un-comment the one you want):
-$c->{'ref'}->{default_search} = 'search_authored';	# items that the user has co-authored (2008 onwards)
+$c->{'ref2021'}->{default_search} = 'search_authored';	# items that the user has co-authored (2008 onwards)
 #$c->{'ref'}->{default_search} = 'search_deposited';	# items that the user has deposited (2008 onwards)
 #$c->{'ref'}->{default_search} = '';			# will show an empty search form
 
@@ -143,8 +143,8 @@ $c->{set_ref2021_selection_automatic_fields} = sub {
 
 		unless( $selection->is_set( 'type' ) )
 		{
-			# see zz_ref_report.pl for $c->{ref}->{map_eprint_type}
-			$selection->set_value( 'type', $session->call( [ 'ref', 'map_eprint_type' ], $eprint ) );
+			# see zz_ref_report.pl for $c->{ref2021}->{map_eprint_type}
+			$selection->set_value( 'type', $session->call( [ 'ref2021', 'map_eprint_type' ], $eprint ) );
 		}
 	}
 };
@@ -176,7 +176,7 @@ $c->add_dataset_trigger( "eprint", EPrints::Const::EP_TRIGGER_AFTER_COMMIT, sub 
 #
 
 {
-no warnings;
+no warnings 'redefine';
 
 package EPrints::DataObj::REF2021Selection;
 

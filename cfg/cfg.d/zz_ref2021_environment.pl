@@ -13,8 +13,8 @@ $c->{plugins}{"Export::REF2021::REF4_XML"}{params}{disable} = 0;
 $c->{plugins}{"Export::REF2021::REF4_Excel"}{params}{disable} = 0;
 
 # REF 4 Report
-$c->{'ref'}->{'reports'} = [] if !defined $c->{'ref'}->{'reports'};
-unshift @{$c->{'ref'}->{'reports'}}, ( 'REF4' );
+$c->{'ref2021'}->{'reports'} = [] if !defined $c->{'ref2021'}->{'reports'};
+unshift @{$c->{'ref2021'}->{'reports'}}, ( 'REF4' );
 
 # REF2021 Environment Dataset definition
 
