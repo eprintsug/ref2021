@@ -9,9 +9,9 @@
           <datasetid>document</datasetid>
           <filename>lang/en/phrases/ref2021.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>4e631200c35e5e7ac3df1e7f1eeb625a</hash>
+          <hash>7b9788f12d61c000fa2cfb7173d40e87</hash>
           <hash_type>MD5</hash_type>
-          <filesize>43892</filesize>
+          <filesize>43933</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -23,11 +23,11 @@
         </file>
         <file>
           <datasetid>document</datasetid>
-          <filename>static/javascript/auto/ref_ajax.js</filename>
+          <filename>static/javascript/auto/ref2021_ajax.js</filename>
           <mime_type>text/x-c++</mime_type>
-          <hash>941a2d77f1ca83e0f4c5e344f246a5f1</hash>
+          <hash>77698363411e8f6c67b83f755840d376</hash>
           <hash_type>MD5</hash_type>
-          <filesize>9722</filesize>
+          <filesize>9774</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -49,57 +49,57 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_Excel.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>f0c97793b551f28b2a35bf17dbc46e99</hash>
+          <hash>cbe62d59aaa719389ee74f9f4800a41b</hash>
           <hash_type>MD5</hash_type>
-          <filesize>4994</filesize>
+          <filesize>5321</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_CSV.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>f4704045ef281d5ba7c07efcfb824b32</hash>
+          <hash>99a4ca83fc461712fe52f85f5302041c</hash>
           <hash_type>MD5</hash_type>
-          <filesize>4250</filesize>
+          <filesize>4578</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF.pm</filename>
           <mime_type>text/x-c++</mime_type>
-          <hash>d9d28d4ea4b7bb1e137429182dfd8697</hash>
+          <hash>a74d887c20722a7305a3da89a778fbe8</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5458</filesize>
+          <filesize>5486</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF4_Excel.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>1659446cce8cdecbf06723fc7bf116ae</hash>
+          <hash>2f5759015eaa4b2c3162d0ebb3615fc5</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5406</filesize>
+          <filesize>5418</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_XML.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>d906405bbd5f61a3a065ae9d9a51e490</hash>
+          <hash>06d8e028d5589b47d65e8cfbdc88f6bf</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5194</filesize>
+          <filesize>5664</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF4_XML.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>87fbf4b607dc2a5d39be2c6b8abb044d</hash>
+          <hash>4d56d02b7c0f5bb282d0902416565db3</hash>
           <hash_type>MD5</hash_type>
-          <filesize>4484</filesize>
+          <filesize>4496</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>bb8dea7176d0115158bdfdccaa8f3a9d</hash>
+          <hash>fe5c4f3f31291537750a20f63cbb7160</hash>
           <hash_type>MD5</hash_type>
-          <filesize>17246</filesize>
+          <filesize>17254</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -113,9 +113,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Report.pm</filename>
           <mime_type>text/x-c++</mime_type>
-          <hash>35fc897f36d512cb3eb63374ce8ce114</hash>
+          <hash>a90de8ea4dbf829aeefe4af2033d5103</hash>
           <hash_type>MD5</hash_type>
-          <filesize>10322</filesize>
+          <filesize>10326</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -129,17 +129,17 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Edit.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>f7e91643a74e7fc7cf76db546dc34c64</hash>
+          <hash>e0267a8608ea0baa03414fb8e622fe4f</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5325</filesize>
+          <filesize>5324</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Listing.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>bee0a9497eaa5eff4f4bdb8bd8456983</hash>
+          <hash>c0a26b4ec94c3d73ff64c955a3282d61</hash>
           <hash_type>MD5</hash_type>
-          <filesize>22212</filesize>
+          <filesize>22228</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -153,17 +153,17 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Report/REF4.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>2c54de973469f23079d919e81a088d65</hash>
+          <hash>f9d919bbf69aa94d13bb6e5d805503cc</hash>
           <hash_type>MD5</hash_type>
-          <filesize>6358</filesize>
+          <filesize>6350</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Report/REF1a.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>a74d83107b5973ea0a29cc78f5396a07</hash>
+          <hash>44d2760413400d5b5e02d9842fbed19d</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5296</filesize>
+          <filesize>5300</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -185,9 +185,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Report/Listing.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>b072034b2ac992b93a45e054d855b956</hash>
+          <hash>726df3ff884341570875629cf556f2f7</hash>
           <hash_type>MD5</hash_type>
-          <filesize>6859</filesize>
+          <filesize>6925</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -265,17 +265,17 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/User/EditCirc.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>6d39347fb2b639131519ec46a23b8118</hash>
+          <hash>ae98f956cf549f0b63de6aae3360556f</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5077</filesize>
+          <filesize>5096</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/User/EditCircLink.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>d8ed25615bb8e79b0849923580f0e5c9</hash>
+          <hash>2bf15ce826f6b77b3c8b23d793ff4e03</hash>
           <hash_type>MD5</hash_type>
-          <filesize>3916</filesize>
+          <filesize>3936</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -481,25 +481,25 @@
           <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/cfg.d/zz_ref2021.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>dfe31ceb9d9936a6fae108fc8de3fc8f</hash>
+          <hash>d20f1edfcf278996dbf95ed292ca99d4</hash>
           <hash_type>MD5</hash_type>
-          <filesize>21289</filesize>
+          <filesize>21316</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/cfg.d/zz_ref2021_reports.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>44205d63c80c91fee94bc4fc122f3af6</hash>
+          <hash>1edf5b427129c6c5736066cf545a7bc3</hash>
           <hash_type>MD5</hash_type>
-          <filesize>25763</filesize>
+          <filesize>27032</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/cfg.d/zz_ref2021_environment.pl</filename>
           <mime_type>text/x-c++</mime_type>
-          <hash>be04db7fd9a6845df22e6f03358ce5d6</hash>
+          <hash>4054a533bae7e43fdf487761e0c97e1d</hash>
           <hash_type>MD5</hash_type>
-          <filesize>4986</filesize>
+          <filesize>4998</filesize>
         </file>
       </files>
       <mime_type>text/x-c++</mime_type>
@@ -534,7 +534,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-04-06 03:38:28</datestamp>
+  <datestamp>2018-04-07 08:21:50</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>

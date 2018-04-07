@@ -3,8 +3,7 @@ package EPrints::Plugin::Export::REF2021::REF4_XML;
 # XML Exporter for REF4a/b/c
 
 use EPrints::Plugin::Export::REF2021::REF_XML;
-
-@ISA = ( "EPrints::Plugin::Export::REF2021:REF_XML" );
+@ISA = ( "EPrints::Plugin::Export::REF2021::REF_XML" );
 
 use strict;
 
