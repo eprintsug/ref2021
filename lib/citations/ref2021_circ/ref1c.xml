@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+
+<!-- 
+	REF 1c
+-->
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+
+<table cellpadding="3" style="margin:1em 0em">
+<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_catc_org"/>:</th><td><print expr="catc_org"/></td><td id="user_{userid.as_string()}_catc_org"/></tr>
+<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_catc_jobtitle"/>:</th><td><print expr="catc_jobtitle"/></td><td id="user_{userid.as_string()}_catc_jobtitle"/></tr>
+<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_catc_text"/>:</th><td><print expr="catc_text"/></td><td id="user_{userid.as_string()}_catc_text"/></tr>
+</table>
+
+</cite:citation>

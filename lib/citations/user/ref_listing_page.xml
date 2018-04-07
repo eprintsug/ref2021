@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<!-- 
+	Page content for REF2021::Listing
+-->
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+
+<epc:pin name="top_tools"/>
+
+<div class="ep_ref_listing_content">
+<epc:print expr="$item.citation('ref')"/>
+<epc:pin name="messages" />
+<h2><epc:phrase ref="ref:title:selections" /></h2>
+<epc:pin name="selections" />
+<epc:if test="$can_select">
+	<br/>
+	<h2><epc:phrase ref="ref:title:results" /></h2>
+	<epc:pin name="results" /> 
+</epc:if>
+</div>
+
+
+</cite:citation>

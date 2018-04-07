@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<!-- 
+	REF 1a fields stored in the User objects (will be inserted in REFCirc->render_citation( 'ref1a' ))
+-->
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+<tr><th align="right"><epc:phrase ref="user_fieldname_ref_category"/>:</th><td><print expr="ref_category"/></td><td id="user_{userid}_ref_category"/></tr>
+<tr><th align="right"><epc:phrase ref="user_fieldname_hesa"/>:</th><td><print expr="hesa"/></td><td id="user_{userid}_hesa"/></tr>
+<tr><th align="right"><epc:phrase ref="user_fieldname_staff_id"/>:</th><td><print expr="staff_id"/></td><td id="user_{userid}_staff_id"/></tr>
+<tr><th align="right"><epc:phrase ref="user_fieldname_dob"/>:</th><td><print expr="dob"/></td><td id="user_{userid}_dob"/></tr>
+<tr><th align="right"><epc:phrase ref="user_fieldname_ref_fte"/>:</th><td><print expr="ref_fte"/></td><td id="user_{userid}_ref_fte"/></tr>
+<tr><th align="right"><epc:phrase ref="user_fieldname_ref_start_date"/>:</th><td><print expr="ref_start_date"/></td><td id="user_{userid}_ref_start_date"/></tr>
+<tr><th align="right"><epc:phrase ref="user_fieldname_ref_is_sensitive"/>:</th><td><print expr="ref_is_sensitive"/></td><td id="user_{userid}_ref_is_sensitive"/></tr>
+<!-- sf2 - moved to REFCirc <tr><th align="right"><epc:phrase ref="user_fieldname_ref_is_ecr" />:</th><td><print expr="ref_is_ecr"/></td></tr> -->
+</cite:citation>

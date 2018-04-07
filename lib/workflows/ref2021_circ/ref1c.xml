@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<workflow xmlns="http://eprints.org/ep3/workflow" xmlns:epc="http://eprints.org/ep3/control">
+
+  <flow>
+    <stage ref="main"/>
+  </flow>
+
+  <stage name="main">
+    <component type="Field::Multi">
+      <title>REF - Staff Circumstances</title>
+
+      <field ref="circ"/>
+      <field ref="circ_text"/>
+      <field ref="is_ecr"/>
+      <field ref="ecr_start"/>
+      <field ref="is_fixed_term"/>
+      <field ref="fixed_term_start"/>
+      <field ref="fixed_term_end"/>
+      <field ref="is_secondment"/>
+      <field ref="secondment_start"/>
+      <field ref="secondment_end"/>
+      <field ref="is_unpaid_leave"/>
+      <field ref="unpaid_leave_start"/>
+      <field ref="unpaid_leave_end"/>
+      <field ref="is_fellow"/>
+      <field ref="is_non_uk"/>
+      <field ref="non_uk_text"/>
+      <field ref="absence"/>
+      <field ref="qual_periods"/>
+      <field ref="complex_reduction"/>
+    </component>
+
+    <component type="Field::Multi">
+      <title>REF 1c - Category C circumstances</title>
+	<field ref="catc_org"/>
+	<field ref="catc_jobtitle"/>
+	<field ref="catc_text"/>
+    </component>
+  </stage>
+</workflow>

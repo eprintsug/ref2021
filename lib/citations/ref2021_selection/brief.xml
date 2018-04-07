@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+
+    <span class="ep_name_citation"><epc:if test="is_set(self_rating)"><epc:print expr="self_rating"/>: </epc:if> <epc:print expr="eprint_id" />
+    <epc:print expr="$item.is_compliant()"/>
+    </span>
+
+</cite:citation>

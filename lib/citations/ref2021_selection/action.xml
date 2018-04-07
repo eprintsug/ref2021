@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+
+<tr class="ep_search_result">
+<td style="padding: 0 10px"><print expr="$n"/>.</td>
+<!--<td><print expr="$uoa"/></td>-->
+<if test="$eprint_exists">
+	<td><print expr="$item.citation('brief')"/></td>
+	<td><print expr="$others"/></td>
+</if>
+<if test="!$eprint_exists">
+	<td><epc:phrase ref="ref:error:no_eprint"/></td><td/>
+</if>
+<td>
+<if test="weight = 'double'">(Double<br/>weighted)</if>
+<print expr="$is_reserve"/>
+</td>
+
+<td style="white-space: nowrap"><print expr="$actions"/></td>
+</tr>
+
+</cite:citation>

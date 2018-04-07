@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
+
+<div class="ep_ref_report_eprint" id="ep_ref_eprint_{$user{userid}}_{$eprint{eprintid}}">
+	<div class="ep_ref_report_eprint_column">
+		<epc:print expr="$n"/>.
+		<a href="{$eprint.url()}"><epc:print expr="$eprint{title}"/></a> (<epc:print expr="$eprint{date}"/>)
+		<epc:if test="is_set(self_rating)"><epc:print expr="self_rating" /></epc:if>
+	</div>
+</div>
+
+</cite:citation>

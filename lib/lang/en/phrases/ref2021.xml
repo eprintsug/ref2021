@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no" ?>
+<!DOCTYPE phrases SYSTEM "entities.dtd">
+
+<epp:phrases xmlns="http://www.w3.org/1999/xhtml" xmlns:epp="http://eprints.org/ep3/phrase" xmlns:epc="http://eprints.org/ep3/control">
+
+<!-- Datasets -->
+
+<!-- User -->
+<epp:phrase id="user_fieldname_dob">Date of Birth</epp:phrase>
+<epp:phrase id="user_fieldhelp_dob">The person's date of birth.</epp:phrase>
+
+<epp:phrase id="user_fieldname_ref_fte">Full-time Equivalent</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref_fte">The FTE of the staff member as a fraction between 0 and 1.</epp:phrase>
+
+<epp:phrase id="user_fieldname_ref_start_date">Staff Commencement Date</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref_start_date">Staff Commencement Date</epp:phrase>
+
+<epp:phrase id="user_fieldname_hesa">HESA Identifier</epp:phrase>
+<epp:phrase id="user_fieldhelp_hesa">The researcher's unique Higher-Education Statistics Agency (HESA) identifier.</epp:phrase>
+
+<epp:phrase id="user_fieldname_ref_category">Staff Category</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref_category">The staff category of the staff member</epp:phrase>
+<epp:phrase id="user_fieldopt_ref_category_A">A</epp:phrase>
+<epp:phrase id="user_fieldopt_ref_category_B">B</epp:phrase>
+<epp:phrase id="user_fieldopt_ref_category_C">C</epp:phrase>
+<epp:phrase id="user_fieldopt_ref_category_D">D</epp:phrase>
+
+<epp:phrase id="user_fieldname_ref_end_date">Staff End Date</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref_end_date">Staff employment end date.</epp:phrase>
+
+<epp:phrase id="user_fieldname_ref2021_uoa">Unit of Assessment (REF2021)</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref2021_uoa">Please select your Unit of Assessment.</epp:phrase>
+
+<epp:phrase id="user_fieldname_ref2021_uoa_role">2021 Unit of Assessment scope</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref2021_uoa_role">Select the Unit(s) of Assessment that this user will be responsible for.</epp:phrase>
+
+<epp:phrase id="user_fieldname_staff_id">Staff Identifier</epp:phrase>
+<epp:phrase id="user_fieldhelp_staff_id"></epp:phrase>
+
+<epp:phrase id="user_fieldname_ref_is_sensitive">Sensitive</epp:phrase>
+<epp:phrase id="user_fieldhelp_ref_is_sensitive">Indicate that the staff record contains sensitive information and should be excluded from publication.</epp:phrase>
+
+<!-- REF Selection Dataset -->
+
+<epp:phrase id="ref2021_selection_fieldname_datestamp">Date of creation</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_lastmod">Last modifications</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_type">Output Type</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_type">The type of output.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_weight">Weighting</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_weight">Request to 'double weight' the output: for outputs of extended scale and scope, the submitting institution may request that the sub-panel weights the output as two. An additional output may be provided as 'reserve' for assessment if the panel does not agree with the double-weighting.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_weight_single">Single</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_weight_double">Double</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_weight_reserve">Reserve</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_weight_text">Double weighting statement</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_weight_text">A statement justifying the proposal for double weighting.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_xref">Cross-Referral</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_xref">Request for cross-referral: a request to the sub-panel to consider cross-referring the output to another sub-panel for advice.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_is_xref">Output cross-referred</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_is_xref">Indicate whether the output is proposed to be cross referred to another panel.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_abstract">English abstract</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_abstract">A brief abstract, for outputs in languages other than English. Maximum <b>100</b> words.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_selectionid">Selection ID</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_userid">Selected for</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_userid_title">Name</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_userid_id">User ID</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_eprintid">Publication</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_eprintid_title">Publication title</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_eprintid_id">Publication ID</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_userid_actual">Selected by</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_userid_actual_title">Name</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_userid_actual_id">User ID</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_position">Position</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_reserve">Reserve output</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_reserve">Identify an output that will not be assessed if this output is accepted as double weighted.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_reserve_1">1</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_reserve_2">2</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_reserve_3">3</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_reserve_4">4</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_research_group">Research Group</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_research_group">A single letter or digit code for the research group associated with this output.</epp:phrase>
+
+
+<epp:phrase id="ref2021_selection_fieldname_interdis">Interdisciplinary Research</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldhelp_interdis">Tick this box if this item is the product of interdisciplinary reserach. You may be required to provide <epc:phrase ref="ref2021_selection_fieldname_details" />.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_details">Additional Information</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldhelp_details">Include here any additional information about the output that you feel the panel members need to consider. You are strongly advised to check the relevant panel criteria (<a hid="http://www.ref.ac.uk/pubs/2006/01/">HEFCE panel guidance website</a>). Maximum <b>300</b> words.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_self_rating">Self Rating</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldhelp_self_rating">
+Please choose one of the following options:<br/>
+<ul>
+	<li><strong>Unclassified</strong>: Quality that falls below the standard of national recognised work. Or work which does not meet the published definition of research for the purposes of this assessment.</li>
+	<li><strong>One star (1*)</strong>: Quality that is recognised nationally in terms of originality, significance and rigour.</li>
+	<li><strong>Two star (2*)</strong>: Quality that is recognised internationally in terms of originality, significance and rigour.</li>
+	<li><strong>Three star (3*)</strong>: Quality that is internationally excellent in terms of originality, significance and rigour but which falls short of the highest standards of excellence.</li>
+	<li><strong>Four star (4*)</strong>: Quality that is world-leading in terms of originality, significance and rigour.</li>
+</ul>
+<strong>Note that this field is not submitted to REF.</strong>
+</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldopt_self_rating_0">Unclassified</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_self_rating_1">1*</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_self_rating_2">2*</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_self_rating_3">3*</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_self_rating_4">4*</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_non_english">Non English output</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_non_english">Indicate whether the output has been published in a language other than English.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_sensitive">Sensitive</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_sensitive">Indicate if the record contains sensitive information and should be excluded from publication.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_pending">Pending publication</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_pending">Indicate whether the output is to be published in December 2013.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_duplicate">Duplicate output</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_duplicate">Indicate whether the output has been listed against another member of staff in the submission.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_has_conflicts">Has conflict of interests</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_has_conflicts">Indicate if the named panel members have conflicts of interest with the output.</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldname_conflicted_members">Conflicted panel members</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_conflicted_members">List the name(s) of the panel member(s) which may have conflicts of interests for commercial reasons.</epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldname_article_id">Article number</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldhelp_article_id"></epp:phrase>
+
+<epp:phrase id="datasetname_ref2021_selection">REF Selections</epp:phrase>
+<epp:phrase id="datasethelp_ref2021_selection">Manages selections for REF.</epp:phrase>
+
+<!-- REF Staff Circumstances -->
+
+<epp:phrase id="ref2021_circ_fieldname_is_ecr">Early Career Researcher</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_is_ecr">Indicate whether this user is an Early Career Researcher.</epp:phrase>
+
+<epp:phrase id="ref2021_circ_fieldname_is_fixed_term">Fixed-term contract</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_is_fixed_term"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_fixed_term_start">Contract starts</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_fixed_term_start"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_fixed_term_end">Contract ends</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_fixed_term_end"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_is_secondment">Secondment</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_is_secondment"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_secondment_start">Secondment starts</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_secondment_start"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_secondment_end">Secondment ends</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_secondment_end"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_is_unpaid_leave">Unpaid leave</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_is_unpaid_leave"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_unpaid_leave_start">Unpaid leave starts</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_unpaid_leave_start"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_unpaid_leave_end">Unpaid leave ends</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_unpaid_leave_end"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_is_fellow">Research fellow</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_is_fellow">Indicate whether the staff member is a Research Fellow (for HEFCW-funded institutions only).</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_is_non_uk">Non-UK based</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_is_non_uk"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_non_uk_text">Non-UK Explanation</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_non_uk_text"></epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_absence">Total period of absence</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_absence">The number of months within the assessment period that the staff member has been absent (up to 2 decimal places).</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_qual_periods">Number of qualifying periods</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_qual_periods">The number of qualifying periods of maternity, paternity or adoption leave.</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_complex_reduction">Complex output reduction</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_complex_reduction">The number of outputs the user wishes to reduce without penalty for the member of staff citing complex circumstances.</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_complex_reduction_0">0</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_complex_reduction_1">1</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_complex_reduction_2">2</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_complex_reduction_3">3</epp:phrase>
+
+<epp:phrase id="ref2021_circ_fieldname_circ">Circumstance</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_circ">The type of circumstances cited for the staff member.</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_1">1- Early career researcher</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_2">2- Part-time, career break or secondment</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_3">3- Qualifying period of maternity, paternity or adaption leave</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_4">4- Period of additional paternity or adoption leave under four months</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_5">5- Category A junior clinical academic</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_6">6- Category C clinical, health or veterinary professional</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldopt_circ_7">7- Complex circumstances</epp:phrase>
+
+<epp:phrase id="ref2021_circ_fieldname_circ_text">Circumstance explanation</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_circ_text"></epp:phrase>
+
+<epp:phrase id="ref2021_circ_fieldname_ecr_start">ECR starts</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_ecr_start">The date the staff member first met the definition of an early career researcher.</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_catc_org">(Cat. C) Employing organisation</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_catc_org">The name of the organisation that the staff member is employed by. For category C staff only.</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_catc_jobtitle">(Cat. C) Job title</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_catc_jobtitle">The job title for the staff member at the organisation the member is employed by. For category C staff only.</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldname_catc_text">(Cat. C) Explanation</epp:phrase>
+<epp:phrase id="ref2021_circ_fieldhelp_catc_text">Text explaining their research responsibilities and how their reseearch is focused in the submitting unit. For category C staff only</epp:phrase>
+
+<!-- REF Benchmark -->
+<epp:phrase id="ref2021_benchmark:workflow:stage:main:title">Details</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_title">Name of benchmark</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldhelp_title">Please enter a distinctive name for this benchmark.</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_date">Date of creation</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_ref2021_benchmarkid">Benchmark ID</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_userid">Benchmark creator</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_end_date">Valid until</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldhelp_end_date">Please enter the end date for this benchmark. After this date, it will not be possible to select new publications. Leave empty if you do not know the end date of this benchmark.</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_description">Description</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldhelp_description">Please enter an optional description.</epp:phrase>
+<epp:phrase id="ref2021_benchmark_fieldname_default">Current benchmark</epp:phrase>
+<epp:phrase id="datasetname_ref2021_benchmark">REF 2021 Benchmarks</epp:phrase>
+
+<epp:phrase id="datasethelp_ref2021_benchmark">Manages Benchmarks for REF 2021.</epp:phrase>
+
+
+<!-- 
+	Screen plugins
+-->
+
+
+<!-- REF Circumstances -->
+<epp:phrase id="Plugin/Screen/REF2021/User/EditCirc:title">REF 2021 Staff Circumstances</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/EditCirc:description">Edit the user's circumstances.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/EditCirc:save">Save</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/EditCirc:stop">Cancel</epp:phrase>
+
+
+<epp:phrase id="Plugin/Screen/REF2021/User/EditCircLink:title">REF Staff Circumstances</epp:phrase>
+
+<!-- REF Champions -->
+<epp:phrase id="Plugin/Screen/REF2021/User/EditUoA:title">REF 2021 UoA Champion</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/EditUoA:description">Select Units of Assessment(s) for this user.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/EditUoA:save">Save</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/EditUoA:stop">Cancel</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/User/Edit:title">REF 2021 Staff Information</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/Edit:description">Enter REF information for this user (to be submitted to REF).</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/Edit:stop">Cancel</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/User/Edit:save">Save</epp:phrase>
+
+<!-- Listing Page -->
+<epp:phrase id="Plugin/Screen/REF2021/Report/Listing:title">REF Reports</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Report/Listing:no_reports"><span style="color: #FF0000;font-weight:bold;">Error: no reports available.</span></epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF1a:title">REF 1a Report</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF1b:title">REF 1b Report</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF1c:title">REF 1c Report</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF2:title">REF 2 Report</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Report:header">
+<div class="ep_ref_report_top_box" style="height:25px;line-height:25px;">
+	<div style="float:right;" class="ep_noprint"><epc:pin name="export"/></div>
+	<div><span>Benchmark:</span><strong><epc:pin name="benchmark"/></strong></div>
+<!--	<div style="float:left;" class="ep_noprint"><a href="#" onclick="return EPJS_REF2021_ShowAllIssues();">Show all issues</a> - <a href="#" onclick="return EPJS_REF2021_HideAllIssues();">Hide all issues</a></div>
+	<div style="clear:both;"/>
+-->
+</div>
+</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/New:title">Create Benchmark</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/New:action:create:title">Create an empty benchmark</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/New:action:cancel:title">Cancel</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/New:action:copy:title">Copy from current benchmark</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/New:create_warning">
+
+<p>Use this option to create a new Benchmark. You may create an empty Benchmark (which will contain no selections upon creation) or make a copy from the current Benchmark (in which case the new Benchmark will be pre-populated).</p>
+
+<p>After creating the Benchmark, you will have to select it as the current Benchmark to allow users to make selections against it.</p> 
+
+</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/Workflow:ref2021_benchmark:main_stage:title">Info</epp:phrase>
+<epp:phrase id="Plugin/Screen/Workflow:ref2021_benchmark:commit_stage:title">Commit</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Select:action:cancel:title">Cancel</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Select:action:select_current:title">Select</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Select:title">Select Current Benchmark</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Select:no_benchmark">
+<p>No existing benchmarks found, perhaps you should create a new one.</p>
+</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Copy:title">Copying Benchmark...</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Copy:page">
+<p>Please wait while the selections are being copied to the new Benchmark. You will then be redirected to the metadata page.</p>
+</epp:phrase>
+
+<epp:phrase id="ref2021:reset_benchmark">Reset</epp:phrase>
+<epp:phrase id="ref2021:change_benchmark">Change</epp:phrase>
+
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Select:action:manage:title">Manage Benchmarks</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Destroy:title">Remove Benchmark</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Destroy:sure_delete"><p>Are you sure you want to remove this benchmark? All the selections made against it will also be removed.</p></epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Destroy:no_such_item">This Benchmark does not exist.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Destroy:item_removed">Benchmark removed.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/Destroy:item_not_removed">Failed to remove the Benchmark.</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Benchmark/LinkListing:action:link:title">Back</epp:phrase>
+
+<!-- EPMC / Bazaar -->
+<epp:phrase id="Plugin/Screen/EPMC/REF2021:confirm">
+<p>Warning: disabling the REF2021 plugin will remove ALL the selections and benchmarks that you have made so far. Are you sure you want to continue?</p>
+</epp:phrase>
+
+
+<epp:phrase id="Plugin/Screen/Workflow:ref2021_selection:main_stage:title">Details</epp:phrase>
+<epp:phrase id="Plugin/Screen/Workflow:ref2021_selection:commit_stage:title">Commit</epp:phrase>
+
+<!-- REF Search/Select -->
+
+<epp:phrase id="ref2021:top_tools:champion">
+<div class="ep_ref_listing_top_box">
+        <div class="ep_ref_listing_column ep_ref_listing_tools"><epc:pin name="tools"/></div>
+        <div class="ep_ref_listing_column ep_ref_listing_benchmarks"><epc:pin name="benchmarks"/></div>
+        <div class="ep_ref_listing_column ep_ref_listing_roles"><epc:pin name="roles"/></div>
+<div style="clear:both"/>
+</div>
+</epp:phrase>
+
+<epp:phrase id="ref2021:top_tools:researcher">
+<div class="ep_ref_listing_top_box">
+        <div class="ep_ref_listing_left_column">
+                <span class="ep_ref_listing_researcher_heading">REF Benchmark: </span><epc:pin name="benchmark"/>
+        </div>
+        <div class="ep_ref_listing_right_column">
+                <epc:pin name="benchmarks"/>
+        </div>
+        <div style="clear:both;"/>
+</div>
+</epp:phrase>
+
+<!-- REF::Overview screen -->
+<epp:phrase id="Plugin/Screen/REF2021/Overview:title">REF2021</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Overview:user_actions">
+<div style="margin:10px auto"><epc:pin name="actions"/></div>
+</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Overview:no_reports">No reports available.</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Overview:error:nothing_to_show">
+<p><strong>No information can be displayed on this page because:</strong></p>
+<ul>
+<li>There are <strong>no</strong> users in the Unit of Assessment you are a champion of.</li>
+<li>And you are <strong>not</strong> affiliated to any Units of Assessment.</li>
+</ul>
+</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Overview:user_cannot_select:benchmark_closed">The benchmark you are viewing is now finished.</epp:phrase>
+
+<!-- Placeholder message on REF Listing -->
+<epp:phrase id="Plugin/Screen/REF2021/Listing:message"></epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Overview:message"></epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Listing:reserved">(Reserve for <br/>Output <strong><epc:pin name="for"/></strong>)</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Listing:user_cannot_select:no_role">You are not permitted to make selections.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Listing:user_cannot_select:no_current_benchmark">There are no REF Benchmarks set up yet.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Listing:user_cannot_select:benchmark_closed">The benchmark you are selecting against is now finished.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Listing:user_cannot_select:no_uoa">You cannot select for REF if you are not affiliated to a Unit of Assessment.</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Listing:no_existing_benchmark">
+<p>
+You cannot yet select publications for REF as no Benchmarks have been organised.
+</p>
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:search_authored_button">Search (co-) authored publications</epp:phrase>
+<epp:phrase id="ref2021/select:search_deposited_button">Search deposited publications</epp:phrase>
+
+
+<!-- Pre-defined searches on REF::Listing -->
+
+<epp:phrase id="ref2021/listing:newsearch:desc">Blank search form</epp:phrase>
+
+<epp:phrase id="ref2021/listing:search_authored:desc">items <epc:pin name="who"/> co-authored from 2014 onwards</epp:phrase>
+<epp:phrase id="ref2021/listing:search_authored_all:desc">*all* the items <epc:pin name="who"/> co-authored</epp:phrase>
+
+<epp:phrase id="ref2021/listing:search_deposited:desc">items <epc:pin name="who"/> deposited from 2014 onwards</epp:phrase>
+<epp:phrase id="ref2021/listing:search_deposited_all:desc">*all* the items <epc:pin name="who"/> deposited</epp:phrase>
+
+<epp:phrase id="ref2021/listing:searches:heading"><div style="margin-top:5px;margin-bottom:10px;">Please find below the list of <epc:pin name="search_desc"/>.
+[<a href="#" onclick="$('ref_listing_other_searches').show();return false;">view other options</a>]</div>
+<div id="ref_listing_other_searches" style="display:none;">
+	<p style="margin-left:15px;">Select an option below:</p>
+        <epc:pin name="other_searches"/>
+</div>
+</epp:phrase>
+
+
+<epp:phrase id="ref2021:reset_role">Reset Role</epp:phrase>
+
+<!-- REF Edit -->
+
+<epp:phrase id="Plugin/Screen/REF2021/Edit:no_such_selection">REF Selection <epc:pin name="id"/> does not exist.</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Edit:stop">Cancel</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Edit:save">Save</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Edit:title">Edit REF Selection</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Edit:eprint_title">Edit REF Selection: <epc:pin name='title'/></epp:phrase>
+
+<!-- REF Status screen -->
+
+<epp:phrase id="Plugin/Screen/REF2021/Listing:title">REF Selections</epp:phrase>
+
+<epp:phrase id="ref2021:tools:header"><h3 style="margin:5px auto;">REF Tools</h3></epp:phrase>
+
+<epp:phrase id="ref2021:title:selections">Selections</epp:phrase>
+<epp:phrase id="ref2021:title:results">Add Selections</epp:phrase>
+
+
+<epp:phrase id="Plugin/Screen/REF2021/Listing:page:error:cannot_select">
+<!-- You may like to add some documentation here -->
+<div style="position: absolute; left: 0px; padding: 10px; width: 175px; border-right: 1px solid #ddd; background-color: #eea; margin-left:25px;">
+<epc:pin name="tools"/>
+<epc:pin name="benchmarks"/>
+<epc:pin name="roles"/>
+</div>
+<h2>Selections</h2>
+<div><epc:pin name="selections"/></div>
+<p>
+This user cannot select for REF.
+</p>
+</epp:phrase>
+
+
+<epp:phrase id="Plugin/Screen/REF2021/Listing:selected">Added <em><epc:pin name="selection" /></em> to REF selections.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Listing:unselected">Removed <em><epc:pin name="selection" /></em> from REF selections.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Listing:action:sync:title">Fix UoA</epp:phrase>
+
+<!-- General -->
+
+<epp:phrase id="ref2021:unknown_uoa">Unknown UoA <epc:pin name="id"/></epp:phrase>
+
+<epp:phrase id="ref2021:unknown_item">
+Unknown Item <epc:pin name="id" />
+</epp:phrase>
+
+<epp:phrase id="ref2021:unknown_user">
+Unknown User <epc:pin name="id" />
+</epp:phrase>
+
+<!-- Roles -->
+
+<epp:phrase id="ref2021:change_role">
+Change Role
+</epp:phrase>
+
+<epp:phrase id="ref2021:benchmarks">
+<div style="text-align:center;margin-bottom:10px;">
+<span style="margin:5px;font-size:14px;">Benchmark:</span><epc:pin name="change_benchmark"/>
+</div>
+</epp:phrase>
+
+<epp:phrase id="ref2021:benchmarks_tools:researcher">
+<a href="#" class="ep_ref_listing_review_bm" onclick="$( 'ep_ref_former_bm' ).show();return false;">Other benchmarks</a>
+<div style="display:none" id="ep_ref_former_bm"><epc:pin name="change_benchmark"/></div>
+</epp:phrase>
+
+<epp:phrase id="ref2021:benchmarks_tools">
+<h3 style="margin:5px auto;">REF Benchmark</h3>
+<div style="text-align:center;"><epc:pin name="change_benchmark"/></div>
+
+</epp:phrase>
+<epp:phrase id="ref2021:roles">
+<h3 style="margin:5px auto;">Selecting for</h3>
+<epc:pin name="change_role" />
+</epp:phrase>
+
+
+<!-- Page: select -->
+
+<epp:phrase id="ref2021/select:page_title">
+Selected Items: <epc:pin name="user" />
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:page">
+<br/>
+<div><epc:pin name="roles" /></div>
+<hr />
+<div><epc:pin name="tools"/></div>
+<h2>Selections for <epc:pin name="current_role"/></h2>
+<div id="epjs_ref_selected_items"><epc:pin name="selected" /></div>
+<br />
+<hr />
+<h2>Available Items:</h2>
+<div id="epjs_ref_search_fragment"><epc:pin name="search" /></div>
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:add_button">
+Add
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:remove_button">
+Deselect
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:qualify_button">
+Add Info
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:already_selected">
+Already Selected
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:selected_by">
+Selected by: <epc:pin name="names" />
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:also_selected_by">
+Also selected by: <epc:pin name="names" />
+</epp:phrase>
+
+<epp:phrase id="ref2021/select:none_selected">
+No items selected.
+</epp:phrase>
+
+
+
+<epp:phrase id="ref2021:stat_total_users">Staff</epp:phrase>
+<epp:phrase id="ref2021:stat_total">Outputs</epp:phrase>
+<epp:phrase id="ref2021:stat_mean_self_rating">Avg. Rating</epp:phrase>
+
+<epp:phrase id="ref2021:validate:year"><epc:pin name="year"/> is outside of census period (2014-2020).</epp:phrase>
+<epp:phrase id="ref2021:validate:doi">Article missing DOI.</epp:phrase>
+<epp:phrase id="ref2021:validate:word_limit"><epc:pin name="field"/> has <epc:pin name="length"/> words versus <epc:pin name="limit"/> maximum.</epp:phrase>
+<epp:phrase id="ref2021:validate:wrong_reserve">This output references a reserve but it has not been flagged as a double-weighted output.</epp:phrase>
+<epp:phrase id="ref2021:validate:self_reserve">This output references it-self as a reserved output.</epp:phrase>
+<epp:phrase id="ref2021:validate:missing_field">Missing required REF field <b><epc:pin name="fieldname" /></b></epp:phrase>
+<epp:phrase id="ref2021:validate:char_limit">Length exceeded for REF field <b><epc:pin name="fieldname" /></b> (max: <epc:pin name="maxlen"/> characters)</epp:phrase>
+<epp:phrase id="ref2021:validate:eprint_not_live">Warning: output not in live archive</epp:phrase>
+
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF2:error:bad_count">User has <epc:pin name="count"/> selection(s).</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF2:error:cross_uoa">User has selections in <epc:pin name="uoas"/>.</epp:phrase>
+<epp:phrase id="Plugin/Screen/REF2021/Report/REF2:error:duplicate">Also selected by <epc:pin name="others"/></epp:phrase>
+
+<epp:phrase id="ref2021_selection_fieldopt_type_A">A - Authored Book</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_B">B - Edited Book</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_C">C - Chapter in Book</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_D">D - Journal Article</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_E">E - Conference Contribution</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_F">F - Patent</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_G">G - Software</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_H">H - Website Content</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_I">I - Performance</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_J">J - Composition</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_K">K - Design</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_L">L - Artefact</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_M">M - Exhibition</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_N">N - Report for External Body</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_O">O - Confidential Report for External Body</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_P">P - Devices and Products</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_Q">Q - Digital or Visual Media</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_R">R - Scholarly Edition</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_S">S - Research Data Sets and Databases</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_T">T - Other</epp:phrase>
+<epp:phrase id="ref2021_selection_fieldopt_type_U">U - Working Paper</epp:phrase>
+
+<epp:phrase id="ref2021:validate:bad_eprint"><b>EPrint does not exist</b></epp:phrase>
+<epp:phrase id="ref2021:validate:bad_type"><b><epc:pin name="eprint_type" /></b> is not a valid REF output type</epp:phrase>
+
+
+<epp:phrase id="ref2021:error:no_eprint"><strong>Error: EPrint does not exist (perhaps it was removed from the repository?).</strong></epp:phrase>
+
+<epp:phrase id="ref2021:error:no_users">
+<h3 style="margin:5px auto;">Selecting for</h3>
+No users found in your UoA.</epp:phrase>
+
+<!-- User validation (REF1 Report) -->
+<epp:phrase id="ref2021:validate_user:no_category">Missing Staff Category.</epp:phrase>
+<epp:phrase id="ref2021:validate_user:wrong_category">Only Categories A or C Staff can submit.</epp:phrase>
+<epp:phrase id="ref2021:validate_user:low_fte">Minimum FTE for submission is 0.2.</epp:phrase>
+<epp:phrase id="ref2021:validate_user:high_fte">FTE cannot be higher than 1.0.</epp:phrase>
+<epp:phrase id="ref2021:validate_user:missing_field">Missing required field <epc:pin name="field"/></epp:phrase>
+
+<!-- REF Reports -->
+
+<epp:phrase id="ref2021:report:ref1a">Staff Info</epp:phrase>
+<epp:phrase id="ref2021:report:ref1b">Circumstances</epp:phrase>
+<epp:phrase id="ref2021:report:ref1c">Cat. C Circumstances</epp:phrase>
+<epp:phrase id="ref2021:report:ref2">Research Outputs</epp:phrase>
+
+<!-- the name of the work sheet -->
+<epp:phrase id="ref2021/report/excel:ref1a">Staff</epp:phrase>
+<epp:phrase id="ref2021/report/excel:ref1b">StaffCircumstance</epp:phrase>
+<epp:phrase id="ref2021/report/excel:ref1c">CategoryCCirumstances</epp:phrase>
+<epp:phrase id="ref2021/report/excel:ref2">Outputs</epp:phrase>
+<epp:phrase id="ref2021/report/excel:ref4a">ResearchDoctoralsAwarded</epp:phrase>
+<epp:phrase id="ref2021/report/excel:ref4b">ResearchIncome</epp:phrase>
+<epp:phrase id="ref2021/report/excel:ref4c">ResearchIncomeInKind</epp:phrase>
+
+<!-- REF4 add-ons -->
+
+<epp:phrase id="datasetname_ref2021_environment">REF (2021) Part 4 Environment Data</epp:phrase>
+<epp:phrase id="datasethelp_ref2021_environment">Manages the REF (2021) Part 4 Environment data</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_ref_environmentid">ID</epp:phrase>
+
+<epp:phrase id="ref2021_environment_fieldname_year">Year</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2013">2013-14</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2014">2014-15</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2015">2015-16</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2016">2016-17</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2017">2017-18</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2018">2018-19</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldopt_year_2019">2019-20</epp:phrase>
+
+
+<epp:phrase id="ref2021_environment_fieldname_degrees">Research Doctoral Degrees Awarded</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_income">Research Income</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_income_source">Source</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_income_value">Value</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_income_in_kind">Research Income-in-kind</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_income_in_kind_source">Source</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_income_in_kind_value">Value</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_datestamp">Date</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_lastmod">Last Modified</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_ref_benchmarkid">Benchmark ID</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_ref2021_uoa">Unit of Assessment</epp:phrase>
+<epp:phrase id="ref2021_environment_fieldname_ref">REF</epp:phrase>
+
+<epp:phrase id="ref2021_environment:workflow:stage:main:title">REF Part 4 (a/b/c) Environment Data</epp:phrase>
+
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_01_bis_research">1. BIS Research Councils, The Royal Society, British Academy and The Royal Society of Edinburgh.</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_02_uk_charities_comp">2. UK-based charities (open competitive process)</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_03_uk_charities_other">3. UK-based charities (other)</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_04_uk_gov">4. UK central government bodies, local authorities, health and hospital authorities</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_05_uk_industry">5. UK industry, commerce and public corporations</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_06_eu_gov">6. EU government bodies</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_07_eu_charities">7. EU-based charities (open competitive process)</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_08_eu_industry">8. EU industry, commerce and public corporations</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_09_eu_other">9. EU other</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_10_non_eu_charities">10. Non-EU-based charities</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_11_non_eu_industry">11. Non-EU industry, commerce and public corporations</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_12_non_eu_other">12. Non-EU other</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_13_other">13. Other sources</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_14_nihr">14. National Institute of Health Research</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_14_sg_hscd">14. Chief Scientist Office, Scottish Government Health and Social Care Directorates</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_14_wg_nischr">14. Welsh Government’s National Institute for Social Care and Health Research</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_source_14_ni_hscrd">14. Health and Social Care Research and Development (HSC RD), Northern Ireland</epp:phrase>
+
+ <epp:phrase id="ref2021_environment_fieldopt_income_in_kind_source_14_nihr">14. National Institute of Health Research</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_in_kind_source_14_sg_hscd">14. Chief Scientist Office, Scottish Government Health and Social Care Directorates</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_in_kind_source_14_wg_nischr">14. Welsh Government’s National Institute for Social Care and Health Research</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_in_kind_source_14_ni_hscrd">14. Health and Social Care Research and Development (HSC RD), Northern Ireland</epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldopt_income_in_kind_source_15_bis_research">15. BIS Research Councils</epp:phrase>
+
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:title">REF4 Data</epp:phrase>
+
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:edit">Edit</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:add">Add</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:year">Year</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:degrees">Degrees</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:income">Income</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:income_in_kind">Income-In-Kind</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Listing:actions">Actions</epp:phrase>
+
+ <epp:phrase id="Plugin/Screen/REF2021/Environment/LinkListing:action:link:title">Return to REF 4 Report</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:title">REF 4 Report</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:view">View</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:edit">Edit</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:error:no_data">No Data found</epp:phrase>
+
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:degrees_awarded">Research Doctoral Degrees Awarded</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:degrees">Degrees Awarded</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:year">Year</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:research_income">Research Income</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:research_income_in_kind">Research Income-In-Kind</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:research_income_source">Source: <epc:pin name="funding_source" /></epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:income">Research Income</epp:phrase>
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:income_in_kind">Research Income-in-kind</epp:phrase>
+
+ <epp:phrase id="Plugin/Screen/REF2021/Report/REF4:no_data"><p style="margin-left:20px;">No data</p></epp:phrase>
+
+ <epp:phrase id="REF4:workflow:ids">Update: <epc:pin name="benchmark" /><epc:pin name="uoa" /><epc:pin name="year" /></epp:phrase>
+
+ <epp:phrase id="ref2021_environment_fieldhelp_degrees"></epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldhelp_income"></epp:phrase>
+ <epp:phrase id="ref2021_environment_fieldhelp_income_in_kind"></epp:phrase>
+
+ <epp:phrase id="Plugin/Screen/REF2021/REF4/Edit:title">Edit</epp:phrase>
+
+ <epp:phrase id="ref2021:validate:not_oa_compliant">This does not meet the open access requirements for REF submission. <epc:pin name="ref_cc_link">Further details are available</epc:pin>.</epp:phrase>
+
+<epp:phrase id="hoa_compliance_marker_N">
+    <img src="/style/images/warning-icon.png" class="hoa_warning_icon" title="Does not meet open access criteria for REF2021"/>
+</epp:phrase>
+<epp:phrase id="hoa_compliance_marker_Y">
+    <img src="/style/images/hoa_message-icon.png" class="hoa_compliant_icon" title="Meets open access criteria for REF2021"/>
+</epp:phrase>
+<epp:phrase id="hoa_compliance_marker_F">
+    <img src="/style/images/hoa_future_compliant-icon.png" class="hoa_future_compliant_icon" title="Will meet open access criteria for REF2021 once embargo expires"/>
+</epp:phrase>
+
+
+
+</epp:phrases>
