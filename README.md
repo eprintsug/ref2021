@@ -10,4 +10,4 @@ Do it again for 2021
 
 If this code is already hosted elsewhere, please contact @cziaarm.
 
-With thanks to Goldsmiths, University of London.
+With thanks to Goldsmiths, University of London who funded the development of REF2021 by the UoL repsotiroies team.
