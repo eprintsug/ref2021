@@ -239,7 +239,7 @@ sub update_datasets
 			my $dataset = $repo2->dataset( $_ );
 			if( !$repo2->get_database->has_dataset( $dataset ) )
 			{
-				$repo2->get_databse->create_dataset_tables( $dataset );
+				$repo2->get_database->create_dataset_tables( $dataset );
 			}
 			foreach my $field ($dataset->get_fields)
 			{
