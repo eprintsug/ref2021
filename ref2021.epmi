@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://192.168.23.142/id/epm/ref2021'>
+<epm xmlns='http://eprints.org/ep2/data/2.0' id='http://template.ulcc.ac.uk/id/epm/ref2021'>
   <epmid>ref2021</epmid>
   <uri>http://192.168.23.142/id/epm/ref2021</uri>
   <documents>
@@ -105,9 +105,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/EPMC/REF2021.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>71e57236b38ccdfde7845343fa7faf93</hash>
+          <hash>bfbe8a63eb1c077ae38451e7ecd6f13a</hash>
           <hash_type>MD5</hash_type>
-          <filesize>6312</filesize>
+          <filesize>6313</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -534,7 +534,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-05-19 09:32:49</datestamp>
+  <datestamp>2018-05-19 11:39:10</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
