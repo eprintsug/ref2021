@@ -53,9 +53,9 @@ sub parse_uoa
         my( $plugin, $uoa_id ) = @_;
 
         my ( $hefce_uoa_id, $is_multiple );
-
+	
 	# multiple submission: on EPrints, those UoAs are encoded with an extra 'b' ('bis') at the end e.g. ref2021_a1b for A1
-        if( $uoa_id =~ /^ref2021_(\w)(\d+)(b?)$/ )
+        if( $uoa_id =~ /^ref2021_(\w)(\d+)(\w?)$/ )
         {
                 $hefce_uoa_id = $2;
                 # $is_multiple = EPrints::Utils::is_set( $3 );
