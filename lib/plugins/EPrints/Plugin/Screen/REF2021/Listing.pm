@@ -795,7 +795,7 @@ sub render
 	}
 		
 	$frag->appendChild( $self->{processor}->{role}->render_citation(
-				'ref_listing_page',
+				'ref2021_listing_page',
 				can_select => $self->can_select,
 				pindata => { inserts => \%inserts },
 	) );

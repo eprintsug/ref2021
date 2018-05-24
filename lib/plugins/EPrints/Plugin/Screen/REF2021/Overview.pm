@@ -316,7 +316,7 @@ sub render
         }
 
 	$frag->appendChild( $repo->make_element( 'br' ) );
-	$frag->appendChild( $role->render_citation( 'ref' ) );
+	$frag->appendChild( $role->render_citation( 'ref2021' ) );
 	$frag->appendChild( $repo->make_element( 'br' ) );
 	$frag->appendChild( $self->render_user_actions );
 
