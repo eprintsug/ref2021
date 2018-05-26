@@ -479,6 +479,14 @@
         </file>
         <file>
           <datasetid>document</datasetid>
+          <filename>epm/ref2021/cfg/cfg.d/zz_ref2021_refcc_integration.pl</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>4df73c8f6c91d4cd4f571d41e2bbb968</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>1961</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/cfg.d/zz_ref2021_circ.pl</filename>
           <mime_type>text/plain</mime_type>
           <hash>87f9d5675c0ccce2dad3e36e682f7af1</hash>
@@ -539,7 +547,7 @@
       <content>coverimage</content>
     </document>
   </documents>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <controller>EPMC::REF2021</controller>
   <creators>
     <item>
@@ -550,7 +558,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-05-24 22:53:26</datestamp>
+  <datestamp>2018-05-26 00:30:49</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
