@@ -695,7 +695,6 @@ No users found in your UoA.</epp:phrase>
 <epp:phrase id="hoa_compliance_marker_F">
     <img src="/style/images/hoa_future_compliant-icon.png" class="hoa_future_compliant_icon" title="Will meet open access criteria for REF2021 once embargo expires"/>
 </epp:phrase>
-
-
+<epp:phrase id="hoa_compliance_marker_N/A"></epp:phrase>
 
 </epp:phrases>
