@@ -139,7 +139,7 @@ sub get_related_objects
 	{
 		# we receive a ref_selection object, and need to give back a user & eprint object
                 $objects = {
-                        ref_selection => $dataobj,
+                        ref2021_selection => $dataobj,
                         user => $session->dataset( 'user' )->dataobj( $dataobj->value( 'user_id' ) ),
                 };
                 my $eprint = $session->dataset( 'eprint' )->dataobj( $dataobj->value( 'eprint_id' ) );
