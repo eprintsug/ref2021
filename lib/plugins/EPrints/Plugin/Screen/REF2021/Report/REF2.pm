@@ -115,7 +115,7 @@ sub render_user
 		name => $user->value( "username" ),
 	) );
 	
-	$chunk->appendChild( $user->render_citation( "ref" ) );
+	$chunk->appendChild( $user->render_citation( "ref2021" ) );
 
 	my $selections = $benchmark->user_selections( $user );
 
