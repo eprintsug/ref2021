@@ -736,7 +736,7 @@ $c->{'ref2021'}->{'ref2'}->{'mappings'} = {
     {
         my( $plugin, $objects ) = @_;
 
-        my $ref_selection = $objects->{ref_selection};
+        my $ref_selection = $objects->{ref2021_selection};
         my $eprint = $objects->{eprint};
 
         my $valid = 0;
@@ -779,7 +779,7 @@ $c->{'ref2021'}->{'ref2'}->{'mappings'} = {
     {
         my( $plugin, $objects ) = @_;
 
-        my $weight = $objects->{ref_selection}->value( 'weight' );
+        my $weight = $objects->{ref2021_selection}->value( 'weight' );
 
         return ( defined $weight && $weight eq 'double' ) ? 'TRUE' : 'FALSE';
     }
@@ -788,9 +788,9 @@ $c->{'ref2021'}->{'ref2'}->{'mappings'} = {
     {
         my( $plugin, $objects ) = @_;
 
-        if( $objects->{ref_selection}->is_set( 'abstract' ) )
+        if( $objects->{ref2021_selection}->is_set( 'abstract' ) )
         {
-            return $objects->{ref_selection}->value( 'abstract' ); 
+            return $objects->{ref2021_selection}->value( 'abstract' ); 
         }
 
         return $objects->{eprint}->value( 'abstract' );
@@ -815,7 +815,7 @@ $c->{'ref2021'}->{'ref2'}->{'mappings'} = {
 
         # this will depend mostly on the Output type - refer to the Output requirements document produced by HEFCE
         
-        my $ref_selection = $objects->{ref_selection};
+        my $ref_selection = $objects->{ref2021_selection};
         return undef unless( $ref_selection->is_set( 'type' ) );
 
         my $eprint = $objects->{eprint};
@@ -850,7 +850,7 @@ $c->{'ref2021'}->{'ref2'}->{'mappings'} = {
     {
         my( $plugin, $objects ) = @_;
 
-        my $ref_selection = $objects->{ref_selection};
+        my $ref_selection = $objects->{ref2021_selection};
 
         my $uoa_id = $ref_selection->value( 'xref' ) or return;
             if( $uoa_id =~ /^ref2021_(\w)(\d+)(b?)$/ )
@@ -874,7 +874,7 @@ $c->{'ref2021'}->{'ref2'}->{'mappings'} = {
         }
 
         # added in v1.2.3
-        return $objects->{ref_selection}->value( 'article_id' );
+        return $objects->{ref2021_selection}->value( 'article_id' );
     }
 
     #Check for compliance NB: requires REF CC plugin to be installed

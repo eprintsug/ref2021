@@ -49,17 +49,17 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_Excel.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>cbe62d59aaa719389ee74f9f4800a41b</hash>
+          <hash>68917b85b68718cfe03ab099d1e7e155</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5321</filesize>
+          <filesize>5324</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_CSV.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>99a4ca83fc461712fe52f85f5302041c</hash>
+          <hash>3e20f237553ba5befd4cfe59b9f3f2f1</hash>
           <hash_type>MD5</hash_type>
-          <filesize>4578</filesize>
+          <filesize>4581</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -513,9 +513,9 @@
           <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/cfg.d/zz_ref2021_reports.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>616350772b1f7c40840246eb391c6837</hash>
+          <hash>366e6afa9850c446a99d255fe2eaad33</hash>
           <hash_type>MD5</hash_type>
-          <filesize>26975</filesize>
+          <filesize>27003</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -558,7 +558,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-06-18 14:57:25</datestamp>
+  <datestamp>2018-06-18 16:37:40</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
