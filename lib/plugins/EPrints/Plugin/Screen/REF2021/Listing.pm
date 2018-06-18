@@ -352,12 +352,11 @@ sub search_filters
 			push @filters,
 				{ meta_fields=>[ 'date' ], value=> "2014-", match=>'EX', describe=>0 };
 		}
-		if(EPrints::Utils::is_set($self->{session}->config("hefce_oa","item_types"))){
-			print STDERR "hefce_oa item_types: ".join(" ",@{$self->{session}->config("hefce_oa","item_types")})."\n";
-			push @filters,
-					{ meta_fields=>[ 'type' ], value=> join(" ",@{$self->{session}->config("hefce_oa","item_types")}), match=>'IN', describe=>0, merge=>"ANY" }; 
-
-		}
+# We don't want to restrict possible delections to only things that are constrained by the OA policy
+#		if(EPrints::Utils::is_set($self->{session}->config("hefce_oa","item_types"))){
+#			push @filters,
+#					{ meta_fields=>[ 'type' ], value=> join(" ",@{$self->{session}->config("hefce_oa","item_types")}), match=>'IN', describe=>0, merge=>"ANY" }; 
+#		}
 	}
 	# and filter on the datasets:
 	my $datasets = $self->{session}->config( 'ref2021', 'listing_search_datasets' ) || 'archive';
