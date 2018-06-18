@@ -307,11 +307,24 @@ sub search_filters
 				# perhaps we need to use custom fields to do the matching between user "id" and eprint "ids"
 				# the default is to match a user's email to the creators_id field
 				my $fields = $self->{session}->config( 'ref2021', 'search_authored', 'by_id_fields' ) || {};
-				my $user_field = $fields->{user_field} || 'email';
-				my $eprint_field = $fields->{eprint_field} || 'creators_id';
+                #Allows us to define a sub in cfg.d to manipulate *user* values before comparison
+                #Should return an EPrints Search Filter
+                if(ref($fields) eq "CODE"){
+                    eval {
+                        push @filters, &$fields( $self->{processor}->{role} );
+                    };
+                    if( $@ )
+                    {
+                        $self->{session}->log( "Screen::REF2021::Listing::search_filters Runtime error: $@" );
+                    }
 
-				my $author_id = $self->{processor}->{role}->get_value( $user_field ) || 'UNSPECIFIED';
-				push @filters, { meta_fields => [ $eprint_field ], value => $author_id, match => 'EX', describe => 0 };
+                }else{
+                    my $user_field = $fields->{user_field} || 'email';
+                    my $eprint_field = $fields->{eprint_field} || 'creators_id';
+
+                    my $author_id = $self->{processor}->{role}->get_value( $user_field ) || 'UNSPECIFIED';
+                    push @filters, { meta_fields => [ $eprint_field ], value => $author_id, match => 'EX', describe => 0 };
+                }
 			}
 			else
 			{

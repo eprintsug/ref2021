@@ -82,15 +82,23 @@ $c->{datasets}->{user}->{search}->{simple}->{meta_fields} = [ "name", "username"
 
 
 # Un-comment the line below to search publications by author id ( == user.email or == role.email ) rather than by author name
-# $c->{'ref'}->{search_authored}->{by_id} = 1;
+# $c->{'ref2021'}->{search_authored}->{by_id} = 1;
 
 # by default the above option will map user.email to eprint.creators_id. But perhaps you'd like to use some other fields, in which case un-comment
 # the following:
-# $c->{'ref'}->{search_authored}->{by_id_fields} = {
+# $c->{'ref2021'}->{search_authored}->{by_id_fields} = {
 #	user_field => userid,
 #	eprint_field => creators_browse_id,
 # };
 
+#by_id_fields can also define a sub that returns a search filter to run against the eprint dataset
+#
+# $c->{'ref2021'}->{search_authored}->{by_id_fields} = sub {
+#   my ($role) = @_;
+#       my $author_id = $role->get_value( "some_user_field" );
+#       ... manipulate here ...
+#        return { meta_fields => [ "some_eprint_field_to_search" ], value => $author_id, match => 'EX', describe => 0 };
+# };
 
 # Sets the datasets to search on the REF2021::Listing screen. By default, it will only search "archive".
 # If you want to search archive + buffer, change this to 'archive buffer'
