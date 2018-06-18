@@ -137,9 +137,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Listing.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>3255b6a5999dcce4f5c210787d768b3c</hash>
+          <hash>fbe50f11e4a1ed5a2881156f589def8c</hash>
           <hash_type>MD5</hash_type>
-          <filesize>22849</filesize>
+          <filesize>23208</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -558,7 +558,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-06-18 13:34:56</datestamp>
+  <datestamp>2018-06-18 14:57:25</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
