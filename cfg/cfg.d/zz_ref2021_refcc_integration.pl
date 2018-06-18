@@ -26,6 +26,54 @@ $c->{eprint_is_compliant} = sub {
 		return "N/A";
 	}
 
+    #BEFORE APR16 == out of scope... so let's exclude these out of scope items...
+    # TODO use special oa_out_of_scope for items that are reffable, but not in scope 
+    # for OA compliance
+    my $APR16 = Time::Piece->strptime( "2016-04-01", "%Y-%m-%d" );
+
+    if($dataobj->exists_and_set("hoa_date_fcd")){
+        my $dep = Time::Piece->strptime( $dataobj->value( "hoa_date_fcd" ), "%Y-%m-%d" );
+        
+        #First compliant deposit is before April 2016 so we are out of scope
+        if( $dep < $APR16 )
+        {		
+    		return "N/A";
+    	}
+    }elsif( $dataobj->is_set( "hoa_date_acc" ) )
+	{
+        # checks based on date of acceptance (if set)
+		my $acc;
+		if( $repo->can_call( "hefce_oa", "handle_possibly_incomplete_date" ) )
+		{
+			$acc = $repo->call( [ "hefce_oa", "handle_possibly_incomplete_date" ], $dataobj->value( "hoa_date_acc" ) );
+		}
+		if( !defined( $acc ) ) #above call can return undef - fallback to default
+		{
+			$acc = Time::Piece->strptime( $dataobj->value( "hoa_date_acc" ), "%Y-%m-%d" );
+		}
+	
+        if( $acc < $APR16 )
+        {		
+    		return "N/A";
+    	}
+    }elsif( $dataobj->is_set( "hoa_date_pub" ) )
+	{
+		my $pub;
+		if( $repo->can_call( "hefce_oa", "handle_possibly_incomplete_date" ) )
+		{
+			$pub = $repo->call( [ "hefce_oa", "handle_possibly_incomplete_date" ], $dataobj->value( "hoa_date_pub" ) );
+		}
+		if( !defined( $pub ) ) #above call can return undef - fallback to default
+		{
+			$pub = Time::Piece->strptime( $dataobj->value( "hoa_date_pub" ), "%Y-%m-%d" );
+		}
+		
+        if( $pub < $APR16 )
+        {		
+    		return "N/A";
+    	}
+	}
+
 	#print compliance
 	my $compliance = "N";
     if ( $flag & HefceOA::Const::COMPLIANT )
