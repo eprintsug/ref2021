@@ -350,10 +350,15 @@ sub search_filters
 		if( $action eq 'search_authored' || $action eq 'search_deposited' )
 		{
 			push @filters,
-				{ meta_fields=>[ 'date' ], value=> "2008-", match=>'EX', describe=>0 };
+				{ meta_fields=>[ 'date' ], value=> "2014-", match=>'EX', describe=>0 };
+		}
+		if(EPrints::Utils::is_set($self->{session}->config("hefce_oa","item_types"))){
+			print STDERR "hefce_oa item_types: ".join(" ",@{$self->{session}->config("hefce_oa","item_types")})."\n";
+			push @filters,
+					{ meta_fields=>[ 'type' ], value=> join(" ",@{$self->{session}->config("hefce_oa","item_types")}), match=>'IN', describe=>0, merge=>"ANY" }; 
+
 		}
 	}
-
 	# and filter on the datasets:
 	my $datasets = $self->{session}->config( 'ref2021', 'listing_search_datasets' ) || 'archive';
 	push @filters,  { meta_fields => [ 'eprint_status' ], value=> $datasets, match => 'IN', merge => 'ANY' };
