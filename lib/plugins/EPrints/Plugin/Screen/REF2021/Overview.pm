@@ -33,7 +33,7 @@ sub can_be_viewed
 	my $rc = $self->SUPER::can_be_viewed();
 	return 0 if( !defined $rc || !$rc );
 
-	return $self->{session}->current_user->has_role( "ref/view/ref2" )
+	return $self->{session}->current_user->has_role( "ref2021/view/ref2" )
 }
 
 sub wishes_to_export { shift->{session}->param( "ajax" ) }
@@ -212,7 +212,7 @@ sub available_reports
 	{
 		if( !$is_uoa_champion )
 		{
-			next unless( $user->has_role( "ref/view/$report" ) );
+			next unless( $user->has_role( "ref2021/view/$report" ) );
 		}
 
 		if( $report eq 'ref1c' )
