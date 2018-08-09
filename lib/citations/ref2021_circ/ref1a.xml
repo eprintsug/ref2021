@@ -8,27 +8,27 @@
 
 <table cellpadding="3" style="margin:1em 0em">
 <epc:pin name="user_fields"/>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_is_ecr"/>:</th><td><print expr="is_ecr"/></td><td id="user_{userid.as_string()}_is_ecr"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_is_fixed_term"/>:</th><td><print expr="is_fixed_term"/></td><td id="user_{userid.as_string()}_is_fixed_term"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_is_ecr"/>:</th><td><print expr="is_ecr"/></td><td id="user_{userid.as_string()}_is_ecr"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_is_fixed_term"/>:</th><td><print expr="is_fixed_term"/></td><td id="user_{userid.as_string()}_is_fixed_term"/></tr>
 <if test="is_fixed_term = 'TRUE'">
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_fixed_term_start"/>:</th><td><print expr="fixed_term_start"/></td><td id="user_{userid.as_string()}_fixed_term_start"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_fixed_term_end"/>:</th><td><print expr="fixed_term_end"/></td><td id="user_{userid.as_string()}_fixed_term_end"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_fixed_term_start"/>:</th><td><print expr="fixed_term_start"/></td><td id="user_{userid.as_string()}_fixed_term_start"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_fixed_term_end"/>:</th><td><print expr="fixed_term_end"/></td><td id="user_{userid.as_string()}_fixed_term_end"/></tr>
 </if>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_is_secondment"/>:</th><td><print expr="is_secondment"/></td><td id="user_{userid.as_string()}_is_secondment"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_is_secondment"/>:</th><td><print expr="is_secondment"/></td><td id="user_{userid.as_string()}_is_secondment"/></tr>
 <if test="is_secondment = 'TRUE'">
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_secondment_start"/>:</th><td><print expr="secondment_start"/></td><td id="user_{userid.as_string()}_secondment_start"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_secondment_end"/>:</th><td><print expr="secondment_end"/></td><td id="user_{userid.as_string()}_secondment_end"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_secondment_start"/>:</th><td><print expr="secondment_start"/></td><td id="user_{userid.as_string()}_secondment_start"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_secondment_end"/>:</th><td><print expr="secondment_end"/></td><td id="user_{userid.as_string()}_secondment_end"/></tr>
 </if>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_is_unpaid_leave"/>:</th><td><print expr="is_unpaid_leave"/></td><td id="user_{userid.as_string()}_is_unpaid_leave"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_is_unpaid_leave"/>:</th><td><print expr="is_unpaid_leave"/></td><td id="user_{userid.as_string()}_is_unpaid_leave"/></tr>
 <if test="is_unpaid_leave = 'TRUE'">
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_unpaid_leave_start"/>:</th><td><print expr="unpaid_leave_start"/></td><td id="user_{userid.as_string()}_unpaid_leave_start"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_unpaid_leave_end"/>:</th><td><print expr="unpaid_leave_end"/></td><td id="user_{userid.as_string()}_unpaid_leave_end"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_unpaid_leave_start"/>:</th><td><print expr="unpaid_leave_start"/></td><td id="user_{userid.as_string()}_unpaid_leave_start"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_unpaid_leave_end"/>:</th><td><print expr="unpaid_leave_end"/></td><td id="user_{userid.as_string()}_unpaid_leave_end"/></tr>
 </if>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_is_non_uk"/>:</th><td><print expr="is_non_uk"/></td><td id="user_{userid.as_string()}_is_non_uk"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_is_non_uk"/>:</th><td><print expr="is_non_uk"/></td><td id="user_{userid.as_string()}_is_non_uk"/></tr>
 <if test="is_non_uk = 'TRUE'">
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_non_uk_text"/>:</th><td><print expr="non_uk_text"/></td><td id="user_{userid.as_string()}_non_uk_text"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_non_uk_text"/>:</th><td><print expr="non_uk_text"/></td><td id="user_{userid.as_string()}_non_uk_text"/></tr>
 </if>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_circ_text"/>:</th><td><print expr="circ_text"/></td><td id="user_{userid.as_string()}_circ_text"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_circ_text"/>:</th><td><print expr="circ_text"/></td><td id="user_{userid.as_string()}_circ_text"/></tr>
 <!-- sf2: + research groups [1..4] -->
 </table>
 

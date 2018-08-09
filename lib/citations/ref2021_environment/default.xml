@@ -2,8 +2,8 @@
 
 <cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
 
-Benchmark: <epc:print expr="ref_benchmarkid" />
-UoA: <epc:print expr="ref_uoa" />
+Benchmark: <epc:print expr="ref2021_benchmarkid" />
+UoA: <epc:print expr="ref2021_uoa" />
 Year: <cite:linkhere><epc:print expr="year" /></cite:linkhere>
 
 </cite:citation>

@@ -52,7 +52,7 @@ sub output_list
 	$workbook->set_properties( utf8 => 1 );
 
 	my $session = $plugin->{session};
-	my $worksheet = $workbook->add_worksheet( $session->phrase( 'ref/report/excel:'.$plugin->get_report ) );
+	my $worksheet = $workbook->add_worksheet( $session->phrase( 'ref2021/report/excel:'.$plugin->get_report ) );
 
 	# the appropriate REF::Report::{report_id} plugin will build up the list: 
 	$plugin->{benchmark} = $opts{benchmark};

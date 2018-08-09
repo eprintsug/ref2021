@@ -10,7 +10,7 @@
 	<td><print expr="$others"/></td>
 </if>
 <if test="!$eprint_exists">
-	<td><epc:phrase ref="ref:error:no_eprint"/></td><td/>
+	<td><epc:phrase ref="ref2021:error:no_eprint"/></td><td/>
 </if>
 <td>
 <if test="weight = 'double'">(Double<br/>weighted)</if>
