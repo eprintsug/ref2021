@@ -24,9 +24,11 @@ sub new
 # sf2 / multipleSubmission is not in the XML template so that field is not currently exported (see http://www.ref.ac.uk/media/ref/content/subguide/3.ExampleImportFile.xml)
 sub output_list
 {
-        my( $plugin, %opts ) = @_;
+    my( $plugin, %opts ) = @_;
 
-        my $list = $opts{list};
+    my $list = $opts{list};
+	$plugin->{benchmark} = $opts{benchmark};
+
 	my $session = $plugin->{session};
 
 	my $institution = $plugin->escape_value( $session->config( 'ref2021', 'institution' ) || $session->phrase( 'archive_name' ) );

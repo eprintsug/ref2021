@@ -81,9 +81,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_XML.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>f76c6a94c4d269f394100502455663f6</hash>
+          <hash>c3d4fe61d1b8d0865bb502f318d90ef5</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5566</filesize>
+          <filesize>5601</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -558,7 +558,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-10-05 05:42:32</datestamp>
+  <datestamp>2018-10-05 06:09:00</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
