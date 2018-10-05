@@ -44,6 +44,8 @@ sub export
 	$plugin->output_list(
 		list => $selections,
 		fh => \*STDOUT,
+		benchmark => $benchmark,
+		uoas => \@uoas,
 	);
 }
 
