@@ -49,9 +49,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Export/REF2021/REF_Excel.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>68917b85b68718cfe03ab099d1e7e155</hash>
+          <hash>01940c2e34b1f575f7b5dcc8805d05c2</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5324</filesize>
+          <filesize>5328</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -97,9 +97,9 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>fe5c4f3f31291537750a20f63cbb7160</hash>
+          <hash>f3f83944f8429adde43331fc2bb60e00</hash>
           <hash_type>MD5</hash_type>
-          <filesize>17254</filesize>
+          <filesize>17253</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -161,17 +161,17 @@
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Report/REF1a.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>44d2760413400d5b5e02d9842fbed19d</hash>
+          <hash>cfba600ab3677ee97d2c9336e3079b28</hash>
           <hash_type>MD5</hash_type>
-          <filesize>5300</filesize>
+          <filesize>5304</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>plugins/EPrints/Plugin/Screen/REF2021/Report/REF2.pm</filename>
           <mime_type>text/plain</mime_type>
-          <hash>8f7a31e0d31125cf4d86ebf529b06bb1</hash>
+          <hash>f4170ae0286a8222513208e293d68165</hash>
           <hash_type>MD5</hash_type>
-          <filesize>7377</filesize>
+          <filesize>7422</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -353,41 +353,41 @@
           <datasetid>document</datasetid>
           <filename>citations/ref2021_environment/default.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>9d8a940b3592fe2302ae75877a1ca494</hash>
+          <hash>7e44c0a04e656333b54e91f9690a0a3c</hash>
           <hash_type>MD5</hash_type>
-          <filesize>329</filesize>
+          <filesize>337</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>citations/ref2021_circ/ref1c.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>826443d2df64fc522ef968a2dab74013</hash>
+          <hash>9fdef30d93583941ffa4e7d6268decd9</hash>
           <hash_type>MD5</hash_type>
-          <filesize>754</filesize>
+          <filesize>766</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>citations/ref2021_circ/ref1a.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>ca398b5978a888b013919951455e5962</hash>
+          <hash>3a5292eb8d0f0f50b9e4a745a7708043</hash>
           <hash_type>MD5</hash_type>
-          <filesize>2823</filesize>
+          <filesize>2875</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>citations/ref2021_circ/ref1b.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>3f7010a718961f2ce124ab4112b3fabc</hash>
+          <hash>9dcd6a5d8cd154c076dee7be68b514ce</hash>
           <hash_type>MD5</hash_type>
-          <filesize>1082</filesize>
+          <filesize>1102</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
           <filename>citations/ref2021_selection/action.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>770a3b5185c18320b802971ee551716d</hash>
+          <hash>78b1725c609d1b8d147fff06c5cc40ae</hash>
           <hash_type>MD5</hash_type>
-          <filesize>674</filesize>
+          <filesize>678</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -415,19 +415,11 @@
         </file>
         <file>
           <datasetid>document</datasetid>
-          <filename>citations/user/ref.xml</filename>
-          <mime_type>application/xml</mime_type>
-          <hash>85c737eb562c136245d47bc17d0147aa</hash>
-          <hash_type>MD5</hash_type>
-          <filesize>381</filesize>
-        </file>
-        <file>
-          <datasetid>document</datasetid>
           <filename>citations/user/ref2021_listing_page.xml</filename>
           <mime_type>application/xml</mime_type>
-          <hash>27035924248672b2a60ef235c351d98d</hash>
+          <hash>8df8f2379b608f7b369b48e8705a2f1d</hash>
           <hash_type>MD5</hash_type>
-          <filesize>582</filesize>
+          <filesize>590</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -436,6 +428,14 @@
           <hash>a176dcbfd52485354a895cbdb5e0b2e3</hash>
           <hash_type>MD5</hash_type>
           <filesize>1465</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
+          <filename>citations/user/result.xml</filename>
+          <mime_type>application/xml</mime_type>
+          <hash>1fa76a55f9ad3d389510d22fe7d80ee7</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>448</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -513,9 +513,9 @@
           <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/cfg.d/zz_ref2021_reports.pl</filename>
           <mime_type>text/plain</mime_type>
-          <hash>366e6afa9850c446a99d255fe2eaad33</hash>
+          <hash>392bc98b357d7d43f80ffd756837d6ec</hash>
           <hash_type>MD5</hash_type>
-          <filesize>27003</filesize>
+          <filesize>27046</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -547,7 +547,7 @@
       <content>coverimage</content>
     </document>
   </documents>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <controller>EPMC::REF2021</controller>
   <creators>
     <item>
@@ -558,7 +558,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-06-20 07:35:02</datestamp>
+  <datestamp>2018-10-05 05:42:32</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
