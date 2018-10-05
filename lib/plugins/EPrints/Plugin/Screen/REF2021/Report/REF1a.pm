@@ -92,7 +92,7 @@ sub render_user
         my $link = $chunk->appendChild( $session->make_element( "a",
                 name => $user->value( "username" ),
         ) );
-        $chunk->appendChild( $user->render_citation( "ref" ) );
+        $chunk->appendChild( $user->render_citation( "ref2021" ) );
 
 	# User metadata problems (and/or local checks!) - See part 3, section 1 of REF2021 Framework (esp. paragraph 84)
 	my @user_problems = $self->validate_user( $user );

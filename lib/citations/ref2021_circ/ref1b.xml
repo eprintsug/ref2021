@@ -7,11 +7,11 @@
 <cite:citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
 
 <table cellpadding="3" style="margin:1em 0em">
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_circ"/>:</th><td><print expr="circ"/></td><td id="user_{userid.as_string()}_circ"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_ecr_start"/>:</th><td><print expr="ecr_start"/></td><td id="user_{userid.as_string()}_ecr_start"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_absence"/>:</th><td><print expr="absence"/></td><td id="user_{userid.as_string()}_absence"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_qual_periods"/>:</th><td><print expr="qual_periods"/></td><td id="user_{userid.as_string()}_qual_periods"/></tr>
-<tr><th align="right"><epc:phrase ref="ref_circ_fieldname_complex_reduction"/>:</th><td><print expr="complex_reduction"/></td><td id="user_{userid.as_string()}_complex_reduction"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_circ"/>:</th><td><print expr="circ"/></td><td id="user_{userid.as_string()}_circ"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_ecr_start"/>:</th><td><print expr="ecr_start"/></td><td id="user_{userid.as_string()}_ecr_start"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_absence"/>:</th><td><print expr="absence"/></td><td id="user_{userid.as_string()}_absence"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_qual_periods"/>:</th><td><print expr="qual_periods"/></td><td id="user_{userid.as_string()}_qual_periods"/></tr>
+<tr><th align="right"><epc:phrase ref="ref2021_circ_fieldname_complex_reduction"/>:</th><td><print expr="complex_reduction"/></td><td id="user_{userid.as_string()}_complex_reduction"/></tr>
 </table>
 
 </cite:citation>

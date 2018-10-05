@@ -11,11 +11,11 @@
 <div class="ep_ref_listing_content">
 <epc:print expr="$item.citation('ref2021')"/>
 <epc:pin name="messages" />
-<h2><epc:phrase ref="ref:title:selections" /></h2>
+<h2><epc:phrase ref="ref2021:title:selections" /></h2>
 <epc:pin name="selections" />
 <epc:if test="$can_select">
 	<br/>
-	<h2><epc:phrase ref="ref:title:results" /></h2>
+	<h2><epc:phrase ref="ref2021:title:results" /></h2>
 	<epc:pin name="results" /> 
 </epc:if>
 </div>

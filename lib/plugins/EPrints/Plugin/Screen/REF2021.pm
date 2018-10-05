@@ -35,7 +35,7 @@ sub can_be_viewed
         }
 
 	return 0 unless( $self->{session}->current_user->exists_and_set( 'ref2021_uoa' ) || $self->{session}->current_user->exists_and_set( 'ref2021_uoa_role' ) );
-	
+
 	return $self->allow( "items" );
 }
 
