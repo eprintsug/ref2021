@@ -471,6 +471,14 @@
         </file>
         <file>
           <datasetid>document</datasetid>
+          <filename>citations/eprint/default_w_hoa.xml</filename>
+          <mime_type>application/xml</mime_type>
+          <hash>209ef829f5714d0a3d724f91b300a5c3</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>362</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
           <filename>epm/ref2021/cgi/users/ajax/ref_copy_progress</filename>
           <mime_type>text/plain</mime_type>
           <hash>949b3fa3c29468f024ea7c4e2c45aea8</hash>
@@ -566,7 +574,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-11-08 14:31:05</datestamp>
+  <datestamp>2018-11-08 19:14:37</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
