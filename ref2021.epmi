@@ -31,6 +31,14 @@
         </file>
         <file>
           <datasetid>document</datasetid>
+          <filename>static/javascript/auto/ref2021_jquery.js</filename>
+          <mime_type>text/plain</mime_type>
+          <hash>343375b83517723e5b36c09f8c7342a7</hash>
+          <hash_type>MD5</hash_type>
+          <filesize>462</filesize>
+        </file>
+        <file>
+          <datasetid>document</datasetid>
           <filename>static/style/images/warning-small.png</filename>
           <mime_type>image/png</mime_type>
           <hash>e4dd51f46566ed3ceacdc900bf2fdf01</hash>
@@ -558,7 +566,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2018-10-05 06:09:00</datestamp>
+  <datestamp>2018-11-08 14:31:05</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
