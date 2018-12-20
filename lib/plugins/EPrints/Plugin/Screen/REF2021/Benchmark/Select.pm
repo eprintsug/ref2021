@@ -104,7 +104,7 @@ sub action_select_current
 {
 	my( $self ) = @_;
 
-	$self->{processor}->{redirect} = $self->{session}->config( 'userhome' )."?screen=Listing&dataset=re2021f_benchmark";
+	$self->{processor}->{redirect} = $self->{session}->config( 'userhome' )."?screen=Listing&dataset=ref2021_benchmark";
 
 	my $selected = $self->{session}->param( 'selected_benchmark' );
 	return unless( defined $selected && $selected =~ /^\d+$/ );
