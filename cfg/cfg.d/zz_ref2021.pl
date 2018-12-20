@@ -123,7 +123,7 @@ $c->add_dataset_trigger( "user", EPrints::Const::EP_TRIGGER_AFTER_COMMIT, sub {
 	return if !defined $uoa_id;
 	return if !$user->is_set( "ref2021_uoa" );
 
-	my $benchmark = EPrints::DataObj::REFBenchmark->default( $repo );
+	my $benchmark = EPrints::DataObj::REF2021Benchmark->default( $repo );
 	return if !defined $benchmark;
 
 	$benchmark->user_selections( $user )->map(sub {
