@@ -15,48 +15,91 @@ sub new
 
 	$self->{name} = "REF2021 - CSV";
 	$self->{suffix} = ".csv";
-	$self->{mimetype} = "text/plain; charset=utf-8";
+	$self->{mimetype} = "text/csv; charset=utf-8";
 	$self->{advertise} = 1;
 
 	return $self;
 }
 
-# Main method - called by the appropriate Screen::Report plugin
 sub output_list
 {
-        my( $plugin, %opts ) = @_;
-       
-	# the appropriate REF::Report::{report_id} plugin will build up the list: 
-	my $session = $plugin->{session};
-	$plugin->{benchmark} = $opts{benchmark};
+	my( $self, %opts ) = @_;
 
-	my $institution = $session->config( 'ref2021', 'institution' ) || $session->phrase( 'archive_name' );
-	my $action = $session->config( 'ref2021', 'action' ) || 'Update';
+	my $fields =[qw/institution unitOfAssessment multipleSubmission action/];
+	push @{$fields}, @{$self->ref_fields_order()};
 
-	# CSV header / field list
-	print "institution,unitOfAssessment,multipleSubmission,action,".join( ",", @{$plugin->ref_fields_order()} )."\n";
+	$opts{fields} = $fields;
+	$self->{benchmark} = $opts{benchmark};
+
+	my @r;
+	my $f = $opts{fh} ? sub { print {$opts{fh}} $_[0] } : sub { push @r, $_[0] };
+
+	#write the header row
+	&$f(csv( @{$fields} ));
+
+	# list of things
+	my $repo = $self->{session};
+	my $institution = $repo->config( 'ref2021', 'institution' ) || $repo->phrase( 'archive_name' );
+	my $action = $repo->config( 'ref2021', 'action' ) || 'Update';
 
 	# common fields/values
-	my $commons = {
+	$opts{commons} = {
 		institution => $institution,
 		action => $action,
 	};
 
 	$opts{list}->map( sub {
-		my( undef, undef, $user ) = @_;
-		my $output = $plugin->output_dataobj( $user, %$commons );
-		return unless( defined $output );
-		print "$output\n";
+		( undef, undef, my $item ) = @_;
+
+		&$f($self->output_dataobj( $item, %opts ));
 	} );
+
+	return join '', @r;
+}
+sub output_dataobj
+{
+	my( $self, $dataobj, %opts ) = @_;
+
+	my $row = $self->REF_to_row( $dataobj, %opts );
+
+	my @r;
+	push @r, csv( @{$row} );
+
+	return join '', @r;
+}
+
+sub csv
+{
+	my( @row ) = @_;
+
+	my @r = ();
+	foreach my $item ( @row )
+	{
+		if( !defined $item )
+		{
+			push @r, '';
+		}
+		else
+		{
+			$item =~ s/"/""/g;
+			$item =~ s/[\n\r\t]//g;
+			push @r, "=\"$item\"" if $item =~ /^\d+$/;
+			push @r, "\"$item\"" if $item !~ /^\d+$/;
+		}
+	}
+
+	return join( ",", @r )."\r\n";
 }
 
 # Exports a single object / line. For CSV this must also includes the first four "common" fields.
-sub output_dataobj
+sub REF_to_row
 {
-	my( $plugin, $dataobj, %commons ) = @_;
+	my( $plugin, $dataobj, %opts ) = @_;
 
 	my $session = $plugin->{session};
 	return "" unless( $session->config( 'ref2021_enabled' ) );
+
+	my $commons = $opts{commons};
 
 	my $ref_fields = $plugin->ref_fields();
 
@@ -89,11 +132,11 @@ sub output_dataobj
 		}
 		else
 		{
-			$value = $commons{$_};
+			$value = $commons->{$_};
 		}
 		if( EPrints::Utils::is_set( $value ) )
 		{
-			push @values, $plugin->escape_value( $value );
+			push @values,  $value;
 		}
 		else
 		{
@@ -107,15 +150,15 @@ sub output_dataobj
 	foreach my $hefce_field ( @{$plugin->ref_fields_order()} )
 	{
 		my $ep_field = $ref_fields->{$hefce_field};
-
 		if( ref( $ep_field ) eq 'CODE' )
 		{
 			# a sub{} we need to run
 			eval {
 				my $value = &$ep_field( $plugin, $objects );
+
 				if( EPrints::Utils::is_set( $value ) )
 				{
-					push @values, $plugin->escape_value( $value );
+					push @values, $value ;
 					$done_any++ 
 				}
 				else
@@ -155,46 +198,18 @@ sub output_dataobj
         if( ref( $value ) eq 'ARRAY' ){
             my $multi = "";
             for my $item(@{$value}){
-                $multi.=$plugin->escape_value( $item )."; ";
+                $multi.=$item ."; ";
             }
             $multi =~ s/;$//g;
             push @values, $multi;
 
         }else{
-            push @values, $plugin->escape_value( $value );
+            push @values, $value;
         }
 	}
 
 	return undef unless( $done_any );
-
-	return join( ",", @values );
+	return \@values;
 }
-
-sub escape_value
-{
-	my( $plugin, $value ) = @_;
-
-	return '""' unless( defined EPrints::Utils::is_set( $value ) );
-
-	# strips any kind of double-quotes:
-	$value =~ s/\x93|\x94|"/'/g;
-	# and control-characters
-	$value =~ s/\n|\r|\t//g;
-
-	# if value is a pure number, then add ="$value" so that Excel stops the auto-formatting (it'd turn 123456 into 1.23e+6)
-	if( $value =~ /^\d+$/ )
-	{
-		return "=\"$value\"";
-	}
-
-	# only escapes values with spaces and commas
-	if( $value =~ /,| / )
-	{
-		return "\"$value\"";
-	}
-
-	return $value;
-}
-
 
 1;
