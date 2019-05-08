@@ -463,7 +463,7 @@ $c->{plugins}->{"Screen::REF2021::Report::REF1a"}->{params}->{validate_user} = s
 
 	# Circumstances validation
 
-	my $circ = EPrints::DataObj::REFCirc2021->new_from_user( $session, $user->get_id, 1 ); 
+	my $circ = EPrints::DataObj::REF2021Circ->new_from_user( $session, $user->get_id, 1 ); 
 	return @problems unless( defined $circ );	# should never happen
 
 	my $circds = $circ->dataset;
@@ -509,7 +509,7 @@ $c->{plugins}->{"Screen::REF2021::Report::REF1c"}->{params}->{validate_user} = s
 	my @problems;
 	
 	my $type = $user->value( 'ref_category' );
-	my $circ = EPrints::DataObj::REFCirc2021->new_from_user( $session, $user->get_id, 1 );
+	my $circ = EPrints::DataObj::REF2021Circ->new_from_user( $session, $user->get_id, 1 );
 	my $circds = $session->dataset( 'ref2021_circ' ); 
 	
 	# if staff is category C, must fill in the cat c circumstance fields:
