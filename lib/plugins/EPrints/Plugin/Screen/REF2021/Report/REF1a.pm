@@ -25,7 +25,7 @@ sub properties_from
 	my( $self ) = @_;
 
 	# will be used by the SUPER class:
-	$self->{processor}->{report2021} = 'ref1a';
+	$self->{processor}->{report} = 'ref1a';
 
 	$self->SUPER::properties_from;
 }
