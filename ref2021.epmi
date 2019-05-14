@@ -489,9 +489,9 @@
           <datasetid>document</datasetid>
           <filename>epm/ref2021/cfg/subjects_uoa</filename>
           <mime_type>text/plain</mime_type>
-          <hash>e7911198f67af014f84a3fb315b3ef20</hash>
+          <hash>90f45b04636879582817dc4c21c4fc6e</hash>
           <hash_type>MD5</hash_type>
-          <filesize>2496</filesize>
+          <filesize>2264</filesize>
         </file>
         <file>
           <datasetid>document</datasetid>
@@ -574,7 +574,7 @@
       <id>you@email.address</id>
     </item>
   </creators>
-  <datestamp>2019-05-13 23:02:45</datestamp>
+  <datestamp>2019-05-14 11:41:44</datestamp>
   <title>REF2021</title>
   <description>This is the description.</description>
   <requirements>The following modules are required: X, Y, Z</requirements>
