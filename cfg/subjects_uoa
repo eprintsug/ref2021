@@ -9,7 +9,7 @@ ref2021_a2:A02 Public Health, Health Services and Primary Care:ref2021_a:1
 ref2021_a3:A03 Allied Health Professions, Dentistry, Nursing and Pharmacy:ref2021_a:1
 ref2021_a4:A04 Psychology, Psychiatry and Neuroscience:ref2021_a:1
 ref2021_a5:A05 Biological Sciences:ref2021_a:1
-ref2021_a6:A06 Agriculture, Veterinary and Food Science:ref2021_a:1
+ref2021_a6:A06 Agriculture, Food and Veterinary Science:ref2021_a:1
 
 ref2021_b:Main panel B:ref2021_uoas:0
 ref2021_b7:B07 Earth Systems and Environmental Sciences:ref2021_b:1
@@ -17,35 +17,33 @@ ref2021_b8:B08 Chemistry:ref2021_b:1
 ref2021_b9:B09 Physics:ref2021_b:1
 ref2021_b10:B10 Mathematical Sciences:ref2021_b:1
 ref2021_b11:B11 Computer Science and Informatics:ref2021_b:1
-ref2021_b12:B12 Aeronautical, Mechanical, Chemical and Manufacturing Engineering:ref2021_b:1
-ref2021_b13:B13 Electrical and Electronic Engineering, Metallurgy and Materials:ref2021_b:1
-ref2021_b14:B14 Civil and Construction Engineering:ref2021_b:1
-ref2021_b15:B15 General Engineering:ref2021_b:1
+ref2021_b12:B12 Engineering:ref2021_b:1
 
 ref2021_c:Main panel C:ref2021_uoas:0
-ref2021_c16:C16 Architecture, Built Environment and Planning:ref2021_c:1
-ref2021_c17:C17 Geography, Environmental Studies and Archaeology:ref2021_c:1
-ref2021_c18:C18 Economics and Econometrics:ref2021_c:1
-ref2021_c19:C19 Business and Management Studies:ref2021_c:1
-ref2021_c20:C20 Law:ref2021_c:1
-ref2021_c21:C21 Politics and International Studies:ref2021_c:1
-ref2021_c22:C22 Social Work and Social Policy:ref2021_c:1
-ref2021_c23:C23 Sociology:ref2021_c:1
-ref2021_c24:C24 Anthropology and Development Studies:ref2021_c:1
-ref2021_c25:C25 Education:ref2021_c:1
-ref2021_c26:C26 Sport and Exercise Sciences, Leisure and Tourism:ref2021_c:1
+ref2021_c13:C13 Architecture, Built Environment and Planning:ref2021_c:1
+ref2021_c14:C14 Geography, Environmental Studies:ref2021_c:1
+ref2021_c15:C15 Archaeology:ref2021_c:1
+ref2021_c16:C16 Economics and Econometrics:ref2021_c:1
+ref2021_c17:C17 Business and Management Studies:ref2021_c:1
+ref2021_c18:C18 Law:ref2021_c:1
+ref2021_c19:C19 Politics and International Studies:ref2021_c:1
+ref2021_c20:C20 Social Work and Social Policy:ref2021_c:1
+ref2021_c21:C21 Sociology:ref2021_c:1
+ref2021_c22:C22 Anthropology and Development Studies:ref2021_c:1
+ref2021_c23:C23 Education:ref2021_c:1
+ref2021_c24:C24 Sport and Exercise Sciences, Leisure and Tourism:ref2021_c:1
 
 ref2021_d:Main panel D:ref2021_uoas:0
-ref2021_d27:D27 Area Studies:ref2021_d:1
-ref2021_d28:D28 Modern Languages and Linguistics:ref2021_d:1
-ref2021_d29:D29 English Language and Literature:ref2021_d:1
-ref2021_d30:D30 History:ref2021_d:1
-ref2021_d31:D31 Classics:ref2021_d:1
-ref2021_d32:D32 Philosophy:ref2021_d:1
-ref2021_d33:D33 Theology and Religious Studies:ref2021_d:1
-ref2021_d34:D34 Art and Design - History, Practice and Theory:ref2021_d:1
-ref2021_d35:D35 Music, Drama, Dance and Performing Art:ref2021_d:1
-ref2021_d36:D36 Communication, Cultural and Media Studies, Library and Information Management:ref2021_d:1
+ref2021_d25:D25 Area Studies:ref2021_d:1
+ref2021_d26:D26 Modern Languages and Linguistics:ref2021_d:1
+ref2021_d27:D27 English Language and Literature:ref2021_d:1
+ref2021_d28:D28 History:ref2021_d:1
+ref2021_d29:D29 Classics:ref2021_d:1
+ref2021_d30:D30 Philosophy:ref2021_d:1
+ref2021_d31:D31 Theology and Religious Studies:ref2021_d:1
+ref2021_d32:D32 Art and Design - History, Practice and Theory:ref2021_d:1
+ref2021_d33:D33 Music, Drama, Dance and Performing Art:ref2021_d:1
+ref2021_d34:D34 Communication, Cultural and Media Studies, Library and Information Management:ref2021_d:1
 
 # For un-assigned staff
 ref2021_z:Z - Unaffiliated:ref2021_uoas:1
